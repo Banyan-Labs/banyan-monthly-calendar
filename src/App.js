@@ -1,6 +1,6 @@
 import React from "react";
-import IntroCard from './components/IntroCard/IntroCard';
 import { BrowserRouter } from "react-router-dom";
+import IntroCard from './components/IntroCard/IntroCard';
 import Footer from "./components/footer";
 import CurrentDate from "./components/CurrentDate";
 import IntroTitle from "./components/IntroTitle";
