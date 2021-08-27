@@ -1,26 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-import NavBar from './components/NavBar';
-function App() {
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import IntroCard from './components/IntroCard/IntroCard';
+import Footer from "./components/footer";
+import CurrentDate from "./components/CurrentDate";
+import IntroTitle from "./components/IntroTitle";
+import TrainingTitle from "./components/TrainingTitle";
+import Notes from "./components/Notes";
+import NavBar from './components/NavBar;
+import "./App.css";
+
+
+
+const App = () => {
   return (
-    <div className="App">
-      <NavBar/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <div className="App">    
+    <BrowserRouter>
+      <CurrentDate />
+      <IntroTitle />
+     <IntroCard />
+      <TrainingTitle />
+      <Notes />
+      <Footer />
+    </BrowserRouter>
+  </div>
   );
-}
+};
 
 export default App;
