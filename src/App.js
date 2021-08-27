@@ -1,12 +1,20 @@
-import './App.css';
+import React from "react";
 import IntroCard from './components/IntroCard/IntroCard';
+import { BrowserRouter } from "react-router-dom";
+import Footer from "./components/footer";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+
+    <div className="App">    
+    <BrowserRouter>
         <IntroCard />
-    </div>
+      <Footer />
+    </BrowserRouter>
+  </div>
+
   );
-}
+};
 
 export default App;
