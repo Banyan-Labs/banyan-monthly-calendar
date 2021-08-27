@@ -1,11 +1,6 @@
-import React from 'react';
-import './style.css';
+import React from "react";
+import "./style.css";
 
-export default function IntroTitle () {
-    return (
-        <div className="introTitle">
-            Introductions
-        </div>
-    );
+export default function IntroTitle() {
+  return <div className="introTitle">Introductions</div>;
 }
-

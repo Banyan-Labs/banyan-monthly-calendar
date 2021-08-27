@@ -4,7 +4,10 @@ import { BrowserRouter } from "react-router-dom";
 import Footer from "./components/footer";
 import CurrentDate from "./components/CurrentDate";
 import IntroTitle from "./components/IntroTitle";
+import TrainingTitle from "./components/TrainingTitle";
 import "./App.css";
+
+
 
 const App = () => {
   return (
@@ -13,7 +16,8 @@ const App = () => {
     <BrowserRouter>
       <CurrentDate />
       <IntroTitle />
-        <IntroCard />
+     <IntroCard />
+      <TrainingTitle />
       <Footer />
     </BrowserRouter>
   </div>
