@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
-import Banyanlabslogo from "./images/Banyanlabslogo.png";
+import Banyanlabslogo from "../../resource/images/Banyanlabslogo.png";
 
 export default function Footer() {
   return (
