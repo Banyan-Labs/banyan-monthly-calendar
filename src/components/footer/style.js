@@ -48,23 +48,3 @@ export const FooterLink = styled(LinkR)`
   }
 `;
 
-// @media screen and (max-width:750px) {
-//    export const Logo = styled.img `
-//         display: none;
-//     `;
-//     export const Container = styled.div `
-//         padding: 13px 0px 13px 0px;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-evenly;
-//         align-items: right;
-//     `;
-//     export const Footerinks = styled.div `
-//         margin-left: 13px;
-//         padding: 0px;
-//         width: 100%;
-//     `;
-//     export const footerLinks = styled.div `
-//         margin-left: 30px;
-//     `;
-// }
