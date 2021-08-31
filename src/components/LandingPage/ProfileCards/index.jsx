@@ -34,7 +34,11 @@ const ProfileCards = () => {
             key={index}
             index={index}
             toggle={index === selectedCardIndex ? true : false}
-            changeIndex={(selectedIndex)=>setSelectedCardIndex(selectedIndex)}
+            changeIndex={(selectedIndex) =>
+              index === selectedCardIndex
+                ? setSelectedCardIndex(-1)
+                : setSelectedCardIndex(selectedIndex)
+            }
           />
         ))}
     </Container>
