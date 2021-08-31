@@ -1,7 +1,11 @@
 import React from "react";
-import { Text } from "./style";
+import { Container,Text } from "./style";
 
 const IntroTitle = () => {
-  return <Text>Introductions</Text>;
+  return (
+    <Container>
+      <Text>Introductions</Text>
+    </Container>
+  );
 };
 export default IntroTitle;
