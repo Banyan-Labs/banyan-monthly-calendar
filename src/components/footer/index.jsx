@@ -1,23 +1,19 @@
 import React from "react";
-import "./style.css";
-import { Link } from "react-router-dom";
+import { Container, Logo, FooterLinksContainer,FooterLink } from "./style";
 import Banyanlabslogo from "../../resource/images/Banyanlabslogo.png";
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <div className="footer">
-      <img src={Banyanlabslogo} className="logo" alt="Banyan Labs Logo" />
-      <div className="links">
-        <Link to="#" className="footerLinks" id="homeLink">
-          Home
-        </Link>
-        <Link to="#" className="footerLinks" id="trainingLink">
-          Trainings
-        </Link>
-        <Link to="#" className="footerLinks" id="archive">
-          Archive
-        </Link>
-      </div>
-    </div>
+    <Container>
+      <Logo src={Banyanlabslogo} alt="Banyan Labs Logo">
+      </Logo>
+      <FooterLinksContainer>
+        <FooterLink to="#">Home</FooterLink>
+        <FooterLink to="#">Trainings</FooterLink>
+        <FooterLink to="#">Archive</FooterLink>
+      </FooterLinksContainer>
+    </Container>
   );
-}
+};
+
+export default Footer;
