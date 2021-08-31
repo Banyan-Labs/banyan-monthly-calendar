@@ -1,6 +1,7 @@
 import React from "react";
-import "./style.css";
+import { Text } from "./style";
 
-export default function IntroTitle() {
-  return <div className="introTitle">Introductions</div>;
-}
+const IntroTitle = () => {
+  return <Text>Introductions</Text>;
+};
+export default IntroTitle;
