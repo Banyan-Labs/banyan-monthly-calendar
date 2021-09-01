@@ -1,6 +1,12 @@
 import React from "react";
-import "./style.css";
+import { Container,Text } from "./style";
 
-export default function TrainingTitle() {
-  return <div className="trainingTitle">Monthly Training</div>;
-}
+const TrainingTitle = () => {
+  return (
+    <Container>
+      <Text>Monthly Training</Text>
+    </Container>
+  );
+};
+
+export default TrainingTitle;

@@ -1,8 +1,7 @@
 import { React, useState } from "react";
-import "./style.css";
+import { Container, Day } from "./style";
 
-
-export default function CurrentDate() {
+const CurrentDate = () => {
   const date = useState(
     new Date().toLocaleDateString("en-US", {
       month: "long",
@@ -10,5 +9,12 @@ export default function CurrentDate() {
       year: "numeric",
     })
   );
-  return <div className="currentDate">{date}</div>
-}
+  return (
+    <Container>
+      <Day>{date}</Day>
+    </Container>
+  );
+};
+
+export default CurrentDate;
+
