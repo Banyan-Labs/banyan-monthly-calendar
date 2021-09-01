@@ -1,8 +1,8 @@
 import React from 'react'
 import { Card, Wrapper, Headshot, Name, Text, FirstInitial } from "./style";
 
-const ProfileCards = ({img, name, text}) => {
-    return (
+const ProfileCard = ({img, name, text}) => {
+       return (
         <Card>
         <Wrapper>
         <Headshot>{img ? img : <FirstInitial>{name[0].toUpperCase()}</FirstInitial>}</Headshot>
@@ -13,4 +13,4 @@ const ProfileCards = ({img, name, text}) => {
     );
 };
 
-export default ProfileCards;
+export default ProfileCard;
