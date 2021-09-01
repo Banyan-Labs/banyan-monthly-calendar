@@ -6,7 +6,7 @@ const ProfileCards = () => {
   const Mockdata = [
     {
       img: "",
-      name: "Shandea",
+      name: "handea",
       text:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt distinctio corrupti quam commodi ipsa cum blanditiis ab ullam aliquid velit necessitatibus alias beatae dicta, ex iste quis repellendus maiores suscipit?",
     },
