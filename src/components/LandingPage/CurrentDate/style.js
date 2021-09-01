@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 5%;
+  height: 4%;
   width: 25%;
   margin: 1% 0% 1% 0%;
   padding: 1% 0% 1% 2%;
@@ -16,9 +16,9 @@ export const Container = styled.div`
   }
 `;
 export const Day = styled.div`
-  font-size: 30px;
+  font-size: 20px;
   @media screen and (max-width: 768px) {
-    font-size: 15px;
+    font-size: 10px;
   }
 `;
 
