@@ -1,6 +1,8 @@
 import React from "react";
-import "./style.css";
+import { Text} from "./style";
 
-export default function TrainingTitle() {
-  return <div className="trainingTitle">Monthly Training</div>;
-}
+const TrainingTitle = () => {
+  return <Text>Monthly Training</Text>;
+};
+
+export default TrainingTitle;
