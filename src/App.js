@@ -8,7 +8,9 @@ import TrainingCards from "./components/TrainingCards";
 
 const App = () => {
   return (
+    <div>
 <TrainingCards />
+</div>
   );
 };
 

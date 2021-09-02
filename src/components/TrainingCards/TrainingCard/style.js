@@ -1,13 +1,10 @@
 import styled from 'styled-components';
 
 export const Card = styled.div`
-position: fixed;
-display:flex;
-flex-direction: row wrap;
-justify-content:space-between;
-bottom:0;
-width:100%;
-height:7%;
+margin-top: 10px;
+background-color:pink;
+width:30%;
+height:100%;
 @media screen and (max-width: 750px) {
     padding:13px 0px 13px 0px;
     flex-direction: column;
@@ -19,23 +16,38 @@ height:7%;
 
 
 export const Presenter = styled.div`
-    margin:0% 0% 0% 40%;
+    margin:0% 0% 0% 5%;
+    color:blue;
 
     `;
 
 
-export const Img = styled.img`
-    width:25%;
+export const Img = styled.div`
+    width:50%;
     border-radius:50%;
 `;
 
 export const Text = styled.div`
     margin:5% 2% 4% 0%;
-    width: 400px;
-    height: 350px;
+    width: 100%;
+    height: 100%;
     display: inline-flex !important;
 `;
 
+
+
+export const FirstInitial = styled.div`
+font-size: 65px;
+font-weight: 900px;
+`;
+
+
+export const Title = styled.div`
+    margin:5% 2% 4% 0%;
+    width: 40px;
+    height: 35px;
+    display: inline-flex !important;
+`;
 
 
 
