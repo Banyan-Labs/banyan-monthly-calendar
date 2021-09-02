@@ -3,14 +3,23 @@ import './App.css';
 import TrainingCards from "./components/TrainingCards";
 
 
+import { BrowserRouter } from "react-router-dom";
+import Footer from "./components/footer";
+import "./App.css";
+import LandingPage from "./components/LandingPage";
 
 
 
 const App = () => {
   return (
-    <div>
-<TrainingCards />
-</div>
+
+    <div>    
+    <BrowserRouter>
+      <LandingPage />
+      <TrainingCards />
+      <Footer />
+    </BrowserRouter>
+  </div>
   );
 };
 
