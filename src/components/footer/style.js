@@ -47,4 +47,3 @@ export const FooterLink = styled(LinkR)`
     margin-left: 30px;
   }
 `;
-
