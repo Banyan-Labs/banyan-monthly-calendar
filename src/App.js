@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./components/footer";
 import "./App.css";
 import LandingPage from "./components/LandingPage";
-import TrainingsPage from "./components/TrainingsPage";
+import TraingsPage from "./components/TrainingsPage";
 
 const App = () => (
   <Router>
@@ -12,7 +12,7 @@ const App = () => (
       <Route
         path="/trainings-page"
         exact
-        component={TrainingsPage}
+        component={TraingsPage}
         isProtected={false}
       />
       <Route
