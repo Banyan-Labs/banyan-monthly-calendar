@@ -21,3 +21,4 @@ export const Text = styled.div`
       font-size: 10px;
 }
 `;
+

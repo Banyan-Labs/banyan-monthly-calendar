@@ -1,6 +1,12 @@
 import React from "react";
-import "./style.css";
+import { Container, Text } from "./style";
 
-export default function Notes() {
-  return <div className="notes">Other Notes</div>;
-}
+const Notes = () => {
+  return (
+    <Container>
+      <Text>Other Notes</Text>
+    </Container>
+  );
+};
+
+export default Notes;
