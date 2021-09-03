@@ -4,9 +4,11 @@ import Footer from "./components/footer";
 import "./App.css";
 import LandingPage from "./components/LandingPage";
 import TraingsPage from "./components/TrainingsPage";
+import NavBar from "./components/NavBar"
 
 const App = () => (
   <Router>
+     <NavBar />
     <Switch>
       <Route path="/" exact component={LandingPage} isProtected={false} />
       <Route
