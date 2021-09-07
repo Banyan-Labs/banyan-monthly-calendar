@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Container, Wrapper } from "./style";
 import TrainingsList from "../SearchBar/TrainingsList";
 import mockData from "./mockData";
+import PreviousTitle from "./PreviousTrainings/PreviousTitle";
 
 const TrainingsPage = () => {
   const [input, setInput] = useState("");
@@ -25,6 +26,7 @@ const TrainingsPage = () => {
     <BrowserRouter>
       <Container>
         <Wrapper>
+          <PreviousTitle />
           <SearchBar updateInput={updateInput} />
           <TrainingsList trainingsList={trainingsList} />
         </Wrapper>
