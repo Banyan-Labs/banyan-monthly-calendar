@@ -1,6 +1,6 @@
 import React from "react";
 import './App.css';
-import TrainingCards from "./components/TrainingCards";
+import TrainingCards from "./components/LandingPage/TrainingCards";
 
 
 import { BrowserRouter } from "react-router-dom";
@@ -17,7 +17,6 @@ const App = () => {
     <BrowserRouter>
     
       <LandingPage />
-      <TrainingCards />
       <Footer />
     </BrowserRouter>
   </div>
