@@ -19,6 +19,7 @@ const TrainingCard = ({ presenter, img, text, title, role }) => {
                         <br />
                         Role: {role && role}
                     </Presenter>
+                     
                 </Wrapper2>
             </Wrapper>
         </Card>

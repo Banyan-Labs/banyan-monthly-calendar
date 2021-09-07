@@ -65,9 +65,8 @@ export const Presenter = styled.div`
     text-align: center;
     font-size:20px;
     border-radius: 6px;
-    background: #c4c4c4;
     text-align: center;
-    width: 216px;
+    width: 270px;
     height: 32px;
 `;
 
