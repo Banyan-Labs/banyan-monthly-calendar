@@ -4,9 +4,12 @@ import Footer from "./components/footer";
 import "./App.css";
 import LandingPage from "./components/LandingPage";
 import TraingsPage from "./components/TrainingsPage";
+import NavBar from "./components/NavBar";
+import ArchivesPage from "./components/ArchivesPage";
 
 const App = () => (
   <Router>
+     <NavBar />
     <Switch>
       <Route path="/" exact component={LandingPage} isProtected={false} />
       <Route
@@ -18,7 +21,7 @@ const App = () => (
       <Route
         path="/archives-page"
         exact
-        component={() => <h1>Put a Component in me!</h1>}
+        component={ArchivesPage}
         isProtected={false}
       />
     </Switch>
