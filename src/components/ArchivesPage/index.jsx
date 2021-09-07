@@ -6,7 +6,7 @@ import { Container, Text } from './style';
 const ArchivesPage = () => {
     return (
         <Container>
-            <Text>Archives Page</Text>
+            <Text>Previous Calls</Text>
             <Footer />
             
         </Container>
