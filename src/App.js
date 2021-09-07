@@ -15,6 +15,7 @@ const App = () => {
 
     <div>    
     <BrowserRouter>
+    
       <LandingPage />
       <TrainingCards />
       <Footer />
