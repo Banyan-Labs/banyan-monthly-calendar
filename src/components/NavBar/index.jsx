@@ -11,9 +11,9 @@ const NavBar = () => {
             <Logo src={Banyanlabslogo} alt="Banyan Labs Logo">
             </Logo>
             <NavLinksContainer>
-                <NavLinks to="#">Home</NavLinks>
-                <NavLinks to="#">Trainings</NavLinks>
-                <NavLinks to="#">Archive</NavLinks>
+                <NavLinks to="/">Home</NavLinks>
+                <NavLinks to="/trainings-page">Trainings</NavLinks>
+                <NavLinks to="/archives-page">Archive</NavLinks>
             </NavLinksContainer>
         </Container>
     );
