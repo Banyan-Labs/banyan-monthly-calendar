@@ -3,7 +3,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import { BrowserRouter } from "react-router-dom";
 import { Container, Wrapper } from "./style";
 import TrainingsList from "../SearchBar/TrainingsList";
-import mockData from "./mockData";
+import mockData from "../../mockData";
 import PreviousTitle from "./PreviousTrainings/PreviousTitle";
 
 const TrainingsPage = () => {

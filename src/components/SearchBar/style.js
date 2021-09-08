@@ -6,7 +6,7 @@ export const Container = styled.form`
   justify-content: right;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: #c4c4c4;
-  margin: 1% 0% 1% 100%;
+  margin: -30% 0% 1% 110%;
   padding: 10px;
   height: 20px;
   width: 300px;
