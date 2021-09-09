@@ -31,19 +31,24 @@ export const Title = styled.div`
 `;
 
 export const Wrapper2 = styled.div`
-    align-items: left;
-    display:flex;
-    justify-content:space-around;
-    top: center;
-    margin: 0% 0% 0% 0%;
-    text-align:left;
-    padding: 2%;
-    @media screen and (max-width: 750px) {
-        padding:13px 0px 13px 0px;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: right;
-    }
+background-color:red;
+height:auto;
+display:flex;
+justify-content:space-around;
+flex-direction: column;
+
+
+`;
+
+export const Wrapper3 = styled.div`
+background-color:blue;
+height:auto;
+width:auto;
+display:flex;
+justify-content:space-around;
+flex-direction: column;
+align-items: center;
+
 
 `;
 
@@ -60,14 +65,27 @@ export const Headshot = styled.div`
 `;
 
 export const Presenter = styled.div`
-    margin-top:70px;
-    margin-right:170px;
+   
     text-align: center;
     font-size:20px;
     border-radius: 6px;
     text-align: center;
     width: 270px;
     height: 32px;
+    background: #c4c4c4;
+`;
+
+export const Role = styled.div`
+   
+    text-align: center;
+    font-size:20px;
+    border-radius: 6px;
+    text-align: center;
+    width: 270px;
+    height: 32px;
+    background: #c4c4c4;
+    display:flex;
+justify-content:space-around;
 `;
 
 export const Img = styled.div`
