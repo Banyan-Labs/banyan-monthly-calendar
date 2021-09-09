@@ -2,43 +2,36 @@ import React from "react";
 import {
   Container,
   Text,
-  WrapperJan,
-  WrapperFeb,
-  WrapperMarch,
-  WrapperApril,
-  WrapperMay,
-  WrapperJune,
-  WrapperJuly,
-  WrapperAugust,
+  MonthWrapper
 } from "./style";
 
 const PreviousCallsList = () => {
   return (
     <Container>
-      <WrapperJan>
+      <MonthWrapper>
         <Text>Janurary 2021 Company Call</Text>
-      </WrapperJan>
-      <WrapperFeb>
+      </MonthWrapper>
+      <MonthWrapper>
         <Text>Feburary 2021 Company Call</Text>
-      </WrapperFeb>
-      <WrapperMarch>
+      </MonthWrapper>
+      <MonthWrapper>
         <Text>March 2021 Company Call</Text>
-      </WrapperMarch>
-      <WrapperApril>
+      </MonthWrapper>
+      <MonthWrapper>
         <Text>April 2021 Company Call</Text>
-      </WrapperApril>
-      <WrapperMay>
+      </MonthWrapper>
+      <MonthWrapper>
         <Text>May 2021 Company Call</Text>
-      </WrapperMay>
-      <WrapperJune>
+      </MonthWrapper>
+      <MonthWrapper>
         <Text>June 2021 Company Call</Text>
-      </WrapperJune>
-      <WrapperJuly>
+      </MonthWrapper>
+      <MonthWrapper>
         <Text>July 2021 Company Call</Text>
-      </WrapperJuly>
-      <WrapperAugust>
+      </MonthWrapper>
+      <MonthWrapper>
         <Text>August 2021 Company Call</Text>
-      </WrapperAugust>
+      </MonthWrapper>
     </Container>
   );
 };
