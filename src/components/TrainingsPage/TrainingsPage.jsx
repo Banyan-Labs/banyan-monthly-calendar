@@ -10,14 +10,6 @@ const TrainingsPage = () => {
   const [input, setInput] = useState("");
   const [trainingsList, setTrainingsList] = useState([]);
 
-  const updateInput = (input) => {
-    const filtered = trainingsList.filter((trainings) => {
-      return trainings.title.toLowerCase().includes(input.toLowerCase());
-    });
-    setInput(input);
-    filtered && input ? setTrainingsList(filtered) : setTrainingsList(mockData);
-  };
-
   useEffect(() => {
     setTrainingsList(mockData);
   }, []);
@@ -27,10 +19,10 @@ const TrainingsPage = () => {
       <Container>
         <Wrapper1>
           <PreviousTitle />
-          <SearchBar updateInput={updateInput} />
+          <SearchBar updateInput={setInput} />
         </Wrapper1>
         <Wrapper2>
-          <TrainingsList trainingsList={trainingsList} />
+          <TrainingsList trainingsList={trainingsList} searchQuery={input} />
         </Wrapper2>
       </Container>
     </BrowserRouter>
