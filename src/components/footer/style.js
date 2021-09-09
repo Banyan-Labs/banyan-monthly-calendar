@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 
 export const Container = styled.div`
-  position: fixed;
   display: flex;
   flex-direction: row wrap;
   justify-content: space-between;
