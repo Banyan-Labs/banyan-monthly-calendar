@@ -1,16 +1,18 @@
-import React from 'react'
-import Footer from '../footer';
-
-import { Container, Text } from './style';
+import React from "react";
+import Footer from "../footer";
+import SearchBar from "../SearchBar/SearchBar";
+import { Container, Text, Wrapper } from "./style";
 
 const ArchivesPage = () => {
-    return (
-        <Container>
-            <Text>Previous Calls</Text>
-            <Footer />
-            
-        </Container>
-    )
-}
+  return (
+    <Container>
+      <Wrapper>
+        <Text>Previous Calls</Text>
+        <SearchBar />
+        <Footer />
+      </Wrapper>
+    </Container>
+  );
+};
 
 export default ArchivesPage;
