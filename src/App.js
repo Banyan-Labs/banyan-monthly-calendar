@@ -7,10 +7,9 @@ import TraingsPage from "./components/TrainingsPage";
 import NavBar from "./components/NavBar";
 import ArchivesPage from "./components/ArchivesPage";
 
-
 const App = () => (
   <Router>
-     <NavBar />
+    <NavBar />
     <Switch>
       <Route path="/" exact component={LandingPage} isProtected={false} />
       <Route
