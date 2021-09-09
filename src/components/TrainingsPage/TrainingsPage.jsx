@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import { BrowserRouter } from "react-router-dom";
 import { Container, Wrapper1, Wrapper2 } from "./style";
-import TrainingsList from "../SearchBar/TrainingsList";
+import TrainingsList from "./TrainingsList";
 import mockData from "../../mockData";
 import PreviousTitle from "./PreviousTrainings/PreviousTitle";
 
