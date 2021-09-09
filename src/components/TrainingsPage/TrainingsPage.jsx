@@ -15,7 +15,7 @@ const TrainingsPage = () => {
       return trainings.title.toLowerCase().includes(input.toLowerCase());
     });
     setInput(input);
-    setTrainingsList(filtered);
+    filtered && input ? setTrainingsList(filtered) : setTrainingsList(mockData);
   };
 
   useEffect(() => {
