@@ -5,7 +5,7 @@ import Footer from "./components/footer";
 import LandingPage from "./components/LandingPage";
 import TraingsPage from "./components/TrainingsPage";
 import NavBar from "./components/NavBar";
-import ArchivesPage from "./components/ArchivesPage/PreviousCalls";
+import ArchivesPage from "./components/ArchivesPage/ArchivesPage";
 
 const App = () => (
   <Router>

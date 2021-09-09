@@ -9,14 +9,6 @@ const ArchivesPage = () => {
   const [input, setInput] = useState("");
   const [previousCallsList, setPreviousCallsList] = useState([]);
 
-  const updateInput = (input) => {
-    const filtered = previousCallsList.filter((calls) => {
-      return calls.title.toLowerCase().includes(input.toLowerCase());
-    });
-    setInput(input);
-    filtered && input ? setPreviousCallsList(filtered) : setPreviousCallsList(mockData2);
-  };
-
   useEffect(() => {
     setPreviousCallsList(mockData2);
   }, []);
@@ -25,9 +17,9 @@ const ArchivesPage = () => {
     <Container>
       <Wrapper>
         <Text>Previous Calls</Text>
-        <SearchBar updateInput={updateInput}/>
+        <SearchBar updateInput={setInput}/>
       </Wrapper>
-      <PreviousCallsList previousCallsList={previousCallsList}/>
+      <PreviousCallsList previousCallsList={previousCallsList} searchQuery={input}/>
     </Container>
   );
 };

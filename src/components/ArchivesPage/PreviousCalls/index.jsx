@@ -1,39 +1,16 @@
 import React from "react";
-import {
-  Container,
-  Text,
-  MonthWrapper
-} from "./style";
+import { Container, Text, MonthWrapper } from "./style";
 
-const PreviousCallsList = () => {
-  return (
-    <Container>
-      <MonthWrapper>
-        <Text>Janurary 2021 Company Call</Text>
-      </MonthWrapper>
-      <MonthWrapper>
-        <Text>Feburary 2021 Company Call</Text>
-      </MonthWrapper>
-      <MonthWrapper>
-        <Text>March 2021 Company Call</Text>
-      </MonthWrapper>
-      <MonthWrapper>
-        <Text>April 2021 Company Call</Text>
-      </MonthWrapper>
-      <MonthWrapper>
-        <Text>May 2021 Company Call</Text>
-      </MonthWrapper>
-      <MonthWrapper>
-        <Text>June 2021 Company Call</Text>
-      </MonthWrapper>
-      <MonthWrapper>
-        <Text>July 2021 Company Call</Text>
-      </MonthWrapper>
-      <MonthWrapper>
-        <Text>August 2021 Company Call</Text>
-      </MonthWrapper>
-    </Container>
-  );
-};
+const PreviousCallsList = ({ previousCallsList, searchQuery }) => (
+  <Container>
+    {previousCallsList
+      .filter((call) => new RegExp(`^${searchQuery}`, "i").test(call.title))
+      .map((call, index) => (
+        <MonthWrapper key={index}>
+          <Text>{`${call.title} 2021 Company Call`}</Text>
+        </MonthWrapper>
+      ))}
+  </Container>
+);
 
 export default PreviousCallsList;
