@@ -2,7 +2,8 @@ import React from 'react';
 import { Card, Presenter, Title, Headshot, Text, FirstInitial, Wrapper, Wrapper2 } from './style';
 
 
-const TrainingCard = ({ presenter, img, text, title, role }) => {
+const TrainingCard = ({ cardData }) => {
+    const { presenter, img, text, title, role } = cardData
     return (
         <Card>
             <Wrapper>

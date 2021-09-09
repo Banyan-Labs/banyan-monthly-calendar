@@ -27,12 +27,7 @@ const TrainingCards = () => {
       {FakeData && 
       FakeData.map((userdata,index)=> (
         <TrainingCard
-          role={userdata.role}
-          title={userdata.title}
-          presenter={userdata.presenter}
-          text={userdata.text}
-          img={userdata.img}
-          key={index}
+          cardData={userdata}
         />
  ))}
      

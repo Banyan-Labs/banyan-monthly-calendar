@@ -1,8 +1,12 @@
 import React from "react";
-import { Text} from "./style";
+import { Container, Text } from "./style";
 
 const TrainingTitle = () => {
-  return <Text>Monthly Training</Text>;
+  return (
+    <Container>
+      <Text>Monthly Training</Text>
+    </Container>
+  );
 };
 
 export default TrainingTitle;
