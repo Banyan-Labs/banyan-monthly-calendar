@@ -1,5 +1,6 @@
 import React from "react";
 import SearchBar from "../SearchBar/SearchBar";
+import PreviousCallsList from "./PreviousCallsList";
 import { Container, Text, Wrapper } from "./style";
 
 const ArchivesPage = () => {
@@ -9,6 +10,7 @@ const ArchivesPage = () => {
         <Text>Previous Calls</Text>
         <SearchBar />
       </Wrapper>
+      <PreviousCallsList />
     </Container>
   );
 };

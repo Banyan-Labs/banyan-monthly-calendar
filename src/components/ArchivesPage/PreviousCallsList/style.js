@@ -1,0 +1,93 @@
+import styled from "styled-components";
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1%;
+  @media screen and (max-width: 768px) {
+    height: 2%;
+    width: 20%;
+    margin-left: 10%;
+    padding: 1% 0% 0% 2%;
+  }
+`;
+export const Text = styled.div`
+  font-size: 20px;
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+  }
+`;
+export const WrapperJan = styled.div`
+  height: 4%;
+  width: 25%;
+  margin-top: 1%;
+  padding: 0.5% 0% 1% 2%;
+  background-color: #c4c4c4;
+  border-radius: 6px;
+  text-align: left;
+`;
+export const WrapperFeb = styled.div`
+  height: 4%;
+  width: 25%;
+  margin-top: 1%;
+  padding: 0.5% 0% 1% 2%;
+  background-color: #c4c4c4;
+  border-radius: 6px;
+  text-align: left;
+`;
+export const WrapperMarch = styled.div`
+  height: 4%;
+  width: 25%;
+  margin-top: 1%;
+  padding: 0.5% 0% 1% 2%;
+  background-color: #c4c4c4;
+  border-radius: 6px;
+  text-align: left;
+`;
+export const WrapperApril = styled.div`
+  height: 4%;
+  width: 25%;
+  margin-top: 1%;
+  padding: 0.5% 0% 1% 2%;
+  background-color: #c4c4c4;
+  border-radius: 6px;
+  text-align: left;
+`;
+export const WrapperMay = styled.div`
+  height: 4%;
+  width: 25%;
+  margin-top: 1%;
+  padding: 0.5% 0% 1% 2%;
+  background-color: #c4c4c4;
+  border-radius: 6px;
+  text-align: left;
+`;
+export const WrapperJune = styled.div`
+  height: 4%;
+  width: 25%;
+  margin-top: 1%;
+  padding: 0.5% 0% 1% 2%;
+  background-color: #c4c4c4;
+  border-radius: 6px;
+  text-align: left;
+`;
+export const WrapperJuly = styled.div`
+  height: 4%;
+  width: 25%;
+  margin-top: 1%;
+  padding: 0.5% 0% 1% 2%;
+  background-color: #c4c4c4;
+  border-radius: 6px;
+  text-align: left;
+`;
+export const WrapperAugust = styled.div`
+  height: 4%;
+  width: 25%;
+  margin-top: 1%;
+  padding: 0.5% 0% 1% 2%;
+  background-color: #c4c4c4;
+  border-radius: 6px;
+  text-align: left;
+`;
