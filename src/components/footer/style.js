@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 
-export const Container = styled.div`
+export const Container = styled.footer`
   display: flex;
   flex-direction: row wrap;
   justify-content: space-between;
@@ -27,7 +27,6 @@ export const Logo = styled.img`
     display: none;
   }
 `;
-
 export const FooterLinksContainer = styled.div`
   margin-right: 40px;
   padding-top: 7px;
@@ -38,7 +37,6 @@ export const FooterLinksContainer = styled.div`
     width: 100%;
   }
 `;
-
 export const FooterLink = styled(LinkR)`
   color: #000 !important;
   padding-right: 20px;

@@ -4,7 +4,6 @@ import PreviousCallsList from "./PreviousCalls";
 import { Container, Text, Wrapper } from "./style";
 import mockData2 from "./PreviousCalls/mockData2";
 
-
 const ArchivesPage = () => {
   const [input, setInput] = useState("");
   const [previousCallsList, setPreviousCallsList] = useState([]);
@@ -17,9 +16,12 @@ const ArchivesPage = () => {
     <Container>
       <Wrapper>
         <Text>Previous Calls</Text>
-        <SearchBar updateInput={setInput}/>
+        <SearchBar updateInput={setInput} />
       </Wrapper>
-      <PreviousCallsList previousCallsList={previousCallsList} searchQuery={input}/>
+      <PreviousCallsList
+        previousCallsList={previousCallsList}
+        searchQuery={input}
+      />
     </Container>
   );
 };
