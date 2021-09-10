@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Card = styled.div`
+export const Card = styled.article`
     width: auto;
     height: 353px;
     margin: 47px 5px;
@@ -31,10 +31,9 @@ export const Title = styled.div`
 `;
 
 export const Wrapper2 = styled.div`
-    align-items: left;
+    align-items: center;
     display:flex;
     justify-content:space-around;
-    top: center;
     margin: 0% 0% 0% 0%;
     text-align:left;
     padding: 2%;
@@ -44,7 +43,6 @@ export const Wrapper2 = styled.div`
         justify-content: space-evenly;
         align-items: right;
     }
-
 `;
 
 export const Headshot = styled.div`
@@ -56,17 +54,13 @@ export const Headshot = styled.div`
     margin-bottom: 12px;
     display: flex;
     justify-content: center;
-    align-items: left;
+    align-items: center
 `;
 
-export const Presenter = styled.div`
-    margin-top:70px;
-    margin-right:170px;
-    text-align: center;
+export const Presenter = styled.p`
     font-size:20px;
     border-radius: 6px;
     text-align: center;
-    width: 270px;
     height: 32px;
 `;
 

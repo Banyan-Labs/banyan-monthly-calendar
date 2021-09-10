@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import { BrowserRouter } from "react-router-dom";
-import { Container, Wrapper1, Wrapper2 } from "./style";
+import { Container, Wrapper, Wrapper2 } from "./style";
 import TrainingsList from "../SearchBar/TrainingsList";
 import mockData from "../../mockData";
 import PreviousTitle from "./PreviousTrainings/PreviousTitle";
@@ -25,13 +25,13 @@ const TrainingsPage = () => {
   return (
     <BrowserRouter>
       <Container>
-        <Wrapper1>
+        <Wrapper>
           <PreviousTitle />
           <SearchBar updateInput={updateInput} />
-        </Wrapper1>
-        <Wrapper2>
+        </Wrapper>
+        <Wrapper>
           <TrainingsList trainingsList={trainingsList} />
-        </Wrapper2>
+        </Wrapper>
       </Container>
     </BrowserRouter>
   );
