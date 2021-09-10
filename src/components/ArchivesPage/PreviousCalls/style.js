@@ -28,5 +28,3 @@ export const MonthWrapper = styled.div`
   border-radius: 6px;
   text-align: left;
 `;
-
-
