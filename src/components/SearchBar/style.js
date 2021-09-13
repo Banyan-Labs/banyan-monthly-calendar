@@ -9,7 +9,6 @@ export const Container = styled.form`
   border-radius: 6px;
   margin-right: 2%;
 `;
-
 export const Input = styled.input`
   font-size: 14px;
   line-height: 1;
