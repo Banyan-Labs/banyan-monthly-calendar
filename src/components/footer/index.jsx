@@ -3,26 +3,22 @@ import {
   Container,
   Logo,
   FooterLinksContainer,
-  FooterLink,
-  Button,
+  FooterLink
 } from "./style";
 import Banyanlabslogo from "../../resource/images/Banyanlabslogo.png";
 import SignIn from "../SignIn/index";
-import SampleModal from "../SampleModal";
+
 
 const Footer = () => {
   const [toggleModal, setToggleModal] = useState(false);
   const [modalIsOpen, setIsOpen] = useState(false);
   
-  //   const openModal = () => {
-  //     setIsOpen(true);
-  //   };
+    const openModal = () => {
+      setIsOpen(true);
+    };
   const closeModal = () => {
     setToggleModal(true);
   };
-  const [email, setEmail] = useState("");
-
-  const [password, setPassword] = useState("");
   return (
     <Container>
       <Logo src={Banyanlabslogo} alt="Banyan Labs Logo"></Logo>
@@ -31,8 +27,6 @@ const Footer = () => {
         <FooterLink to="/trainings-page">Trainings</FooterLink>
         <FooterLink to="/archives-page">Archive</FooterLink>
         <SignIn show={toggleModal} />
-        {/* <Button onClick={() => setToggleModal(true)}>Sign out</Button> */}
-        <SampleModal />
       </FooterLinksContainer>
     </Container>
   );
