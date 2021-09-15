@@ -1,21 +1,15 @@
 import React, { useState } from "react";
-import {
-  Container,
-  Logo,
-  FooterLinksContainer,
-  FooterLink
-} from "./style";
+import { Container, Logo, FooterLinksContainer, FooterLink } from "./style";
 import Banyanlabslogo from "../../resource/images/Banyanlabslogo.png";
 import SignIn from "../SignIn/index";
-
 
 const Footer = () => {
   const [toggleModal, setToggleModal] = useState(false);
   const [modalIsOpen, setIsOpen] = useState(false);
-  
-    const openModal = () => {
-      setIsOpen(true);
-    };
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
   const closeModal = () => {
     setToggleModal(true);
   };
