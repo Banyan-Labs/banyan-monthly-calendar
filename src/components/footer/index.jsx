@@ -8,6 +8,7 @@ import {
 } from "./style";
 import Banyanlabslogo from "../../resource/images/Banyanlabslogo.png";
 import SignIn from "../SignIn/index";
+import SampleModal from "../SampleModal";
 
 const Footer = () => {
   const [toggleModal, setToggleModal] = useState(false);
@@ -30,7 +31,8 @@ const Footer = () => {
         <FooterLink to="/trainings-page">Trainings</FooterLink>
         <FooterLink to="/archives-page">Archive</FooterLink>
         <SignIn show={toggleModal} />
-        <Button onClick={() => setToggleModal(true)}>Sign out</Button>
+        {/* <Button onClick={() => setToggleModal(true)}>Sign out</Button> */}
+        <SampleModal />
       </FooterLinksContainer>
     </Container>
   );
