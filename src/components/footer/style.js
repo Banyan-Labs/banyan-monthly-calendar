@@ -44,3 +44,6 @@ export const FooterLink = styled(LinkR)`
     margin-left: 30px;
   }
 `;
+export const Button = styled.button `
+background: gray;
+`
