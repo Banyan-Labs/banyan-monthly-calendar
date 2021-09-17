@@ -5,6 +5,8 @@ import {
   ModalCard,
   CloseButton,
   Form,
+  Input,
+  SubmitButton,
 } from "./style";
 
 const SignInModal = () => {
@@ -13,28 +15,36 @@ const SignInModal = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setIsModalOpen(false);
+  };
+
   return (
     <>
       <ToggleButton onClick={toggleModal}>Sign In</ToggleButton>
       <ModalContainer isOpen={isModalOpen}>
         <ModalCard>
           <CloseButton onClick={toggleModal}>Close</CloseButton>
-          <Form>
-            <input
+          <Form onSubmit={onSubmit}>
+            <Input
               type="text"
               value={email}
               placeholder="Email"
               onChange={(event) => setEmail(event.target.value)}
             />
-            <input
+            <br />
+            <Input
               type="password"
               value={password}
               placeholder="password"
               onChange={(event) => setPassword(event.target.value)}
             />
-            <button placeholder="submit" type="submit">
+            <br />
+            <SubmitButton placeholder="submit" type="submit">
               Submit
-            </button>
+            </SubmitButton>
           </Form>
         </ModalCard>
       </ModalContainer>
