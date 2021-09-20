@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 
 export const Container = styled.footer`
+  position: fixed;
   display: flex;
   flex-direction: row wrap;
   justify-content: space-between;
@@ -43,4 +44,7 @@ export const FooterLink = styled(LinkR)`
   @media screen and (max-width: 750px) {
     margin-left: 30px;
   }
+`;
+export const Button = styled.button`
+  background: gray;
 `;
