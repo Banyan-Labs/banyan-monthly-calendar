@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Link as LinkR} from "react-router-dom";
 
 export const ToggleButton = styled.button`
   padding: 8px;
@@ -51,4 +52,7 @@ export const SubmitButton = styled.button`
   padding: 16px;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
+`;
+export const Link = styled(LinkR)`
+  padding-right: 20px;
 `;

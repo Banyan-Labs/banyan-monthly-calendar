@@ -7,6 +7,7 @@ import {
   Form,
   Input,
   SubmitButton,
+  Link,
 } from "./style";
 
 const SignInModal = () => {
@@ -42,9 +43,11 @@ const SignInModal = () => {
               onChange={(event) => setPassword(event.target.value)}
             />
             <br />
+            <Link to="/adminForm">
             <SubmitButton placeholder="submit" type="submit">
               Submit
             </SubmitButton>
+            </Link>
           </Form>
         </ModalCard>
       </ModalContainer>
