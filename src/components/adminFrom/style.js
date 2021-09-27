@@ -1,4 +1,3 @@
-import react from "react";
 import styled from "styled-components";
 // import { Dropdown as DropdownS } from "semantic-ui-react";
 
@@ -17,13 +16,9 @@ export const Text = styled.div`
     font-size: 10px;
   }
 `;
-// export const Dropdown = styled(DropdownS)`
-//   background: #000;
-//   padding: 10px;
-//   &.active {
-//    background: #f0f0f0;
-//  }
-// `
+export const Select = styled.select`
+padding: 3px;
+`;
 export const PersonPhoto = styled.div`
   width: 107px;
   height: 107px;
@@ -57,12 +52,3 @@ export const SubmitButton = styled.button`
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 `;
-// export const CloseButton = styled.button`
-//   position: relative;
-//   top: 0;
-//   right: 0;
-//   margin: 10px;
-//   padding: 16px;
-//   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-//     0 17px 50px 0 rgba(0, 0, 0, 0.19);
-// `;

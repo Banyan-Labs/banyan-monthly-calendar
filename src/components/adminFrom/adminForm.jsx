@@ -7,31 +7,30 @@ import {
   SubmitButton,
   PersonPhoto,
   AddPhotoButton,
-  // SelectDrop,
+  Select,
 } from "./style";
-// import { Dropdown, Menu } from "semantic-ui-react";
 import BillyJimBobWithAWig from "../../resource/images/avatar.png";
 
 const AdminForm = () => {
-  const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
 
-  // const options = [
-  //   { key: 1, text: "January", value: 1 },
-  //   { key: 2, text: "Febuary", value: 2 },
-  //   { key: 3, text: "March", value: 3 },
-  //   { key: 4, text: "April", value: 4 },
-  //   { key: 5, text: "May", value: 5 },
-  //   { key: 6, text: "June", value: 6 },
-  //   { key: 7, text: "July", value: 7 },
-  //   { key: 8, text: "August", value: 8 },
-  //   { key: 9, text: "September", value: 9 },
-  //   { key: 10, text: "October", value: 10 },
-  //   { key: 11, text: "November", value: 11 },
-  //   { key: 12, text: "December", value: 12 },
-  // ];
+  const options = [
+    { key: 1, text: "Select Month"},
+    { key: 2, text: "January"},
+    { key: 3, text: "Febuary"},
+    { key: 4, text: "March"},
+    { key: 5, text: "April"},
+    { key: 6, text: "May"},
+    { key: 7, text: "June"},
+    { key: 8, text: "July"},
+    { key: 9, text: "August"},
+    { key: 10, text: "September"},
+    { key: 11, text: "October"},
+    { key: 12, text: "November"},
+    { key: 13, text: "December"},
+  ];
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -42,41 +41,14 @@ const AdminForm = () => {
       <Container>
         <Text>Date</Text>
         <Form onSubmit={onSubmit}>
-          {/* <Menu compact>
-            <Dropdown text="Dropdown" options={options}  />
-          </Menu> */}
-          {/* <SelectDrop>
-            <option>January</option>
-
-            <option>Feburary</option>
-
-            <option>March</option>
-
-            <option>April</option>
-
-            <option>May</option>
-
-            <option>June</option>
-
-            <option>July</option>
-
-            <option>August</option>
-
-            <option>September</option>
-
-            <option>October</option>
-
-            <option>November</option>
-
-            <option>December</option>
-          </SelectDrop> */}
-          <Input
-            type="text"
-            value={month}
-            placeholder="Month"
-            onChange={(event) => setMonth(event.target.value)}
-          />
-          <br />
+          <Select>
+            {options.map((option) => (
+              <option key={option.key} value={option.text}>
+                {option.text}
+              </option>
+            ))}
+          </Select>
+      < br />
           <Input
             type="text"
             value={year}
