@@ -1,7 +1,4 @@
 import styled from "styled-components";
-// import { Dropdown as DropdownS } from "semantic-ui-react";
-
-
 
 export const Container = styled.div`
   padding: 2rem 2rem;
@@ -17,7 +14,7 @@ export const Text = styled.div`
   }
 `;
 export const Select = styled.select`
-padding: 3px;
+  padding: 3px;
 `;
 export const PersonPhoto = styled.div`
   width: 107px;
@@ -40,8 +37,7 @@ export const Form = styled.form`
   flex-direction: column;
   justify-content: space-around;
   padding: 1rem;
-  box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 `;
 export const Input = styled.input`
   padding: 3px;
