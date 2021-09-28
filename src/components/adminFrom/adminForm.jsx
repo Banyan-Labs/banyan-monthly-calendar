@@ -14,7 +14,7 @@ import Photo from "../../resource/images/avatar.png";
 const AdminForm = () => {
   const [year, setYear] = useState("");
   const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
+  const [introDescription, setIntroDescription] = useState("");
 
   const options = [
     { key: 1, text: "Select Month" },
@@ -72,9 +72,9 @@ const AdminForm = () => {
           <br />
           <Input
             type="text"
-            value={description}
+            value={introDescription}
             placeholder="Description"
-            onChange={(event) => setDescription(event.target.value)}
+            onChange={(event) => setIntroDescription(event.target.value)}
           />
           <br />
           <SubmitButton placeholder="Add Person" type="submit">
