@@ -8,6 +8,12 @@ import TrainingCards from "./TrainingCards";
 
 import { Container, Wrapper } from "./style";
 
+// Get request goes here.
+// use axios or fetch to go to http://yourbackendURL.com/months
+// will return some object
+// from that object we only need the first item
+
+
 const LandingPage = () => (
   <Container>
     <Wrapper>
