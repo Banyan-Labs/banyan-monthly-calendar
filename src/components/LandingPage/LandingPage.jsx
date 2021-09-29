@@ -14,11 +14,11 @@ const LandingPage = () => {
   const [data, setData] = useState([])
   
   useEffect(() => {
-    const backendUrl = 'type your heroku backend url here'
+    // const backendUrl = 'type your heroku backend url here'
 
-    fetch('https://jsonplaceholder.typicode.com/posts')
-    // const backendUrl = 'https://banyan-cmc-backend.herokuapp.com/'
-    // fetch(backendUrl)
+    // fetch('https://jsonplaceholder.typicode.com/posts')
+    const backendUrl = 'https://banyan-cmc-backend.herokuapp.com/'
+    fetch(backendUrl)
       .then((response) => response.json())
       .then((json) => {
         console.log(json)
