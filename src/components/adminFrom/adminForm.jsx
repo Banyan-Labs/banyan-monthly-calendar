@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useHistory } from "react-router-dom";
 import {
   Container,
   Form,
@@ -9,13 +11,16 @@ import {
   AddPhotoButton,
   Select,
 } from "./style";
-import Photo from "../../resource/images/avatar.png";
+// import Photo from "../../resource/images/avatar.png";
+
+
 
 const AdminForm = () => {
   const [year, setYear] = useState("");
   const [name, setName] = useState("");
   const [introDescription, setIntroDescription] = useState("");
-
+  const [introImage, setIntroImage] = useState("");
+  const url = "http://localhost:8080/api/month";
   const options = [
     { key: 1, text: "Select Month" },
     { key: 2, text: "January" },
@@ -31,16 +36,35 @@ const AdminForm = () => {
     { key: 12, text: "November" },
     { key: 13, text: "December" },
   ];
+  const postObject = {
+    year: year,
+    name: name,
+    introImage: introImage,
+    introDescription: introDescription,
+  };
 
-  const onSubmit = (e) => {
+  useEffect(() => {
+  axios.get(url).then((response) => {
+    postObject(response.data);
+  });
+}, []);
+
+  function createPost() {
+    axios.post(url, postObject).then((res) => {
+      console.log(res.data);
+    });
+  }
+  const history = useHistory();
+  const handleSubmit = (e) => {
     e.preventDefault();
+    history.push("/");
   };
 
   return (
     <>
       <Container>
+        <Form onSubmit={handleSubmit}>
         <Text>Date</Text>
-        <Form onSubmit={onSubmit}>
           <Select>
             {options.map((option) => (
               <option key={option.key} value={option.text}>
@@ -50,34 +74,48 @@ const AdminForm = () => {
           </Select>
           <br />
           <Input
-            type="text"
-            value={year}
-            placeholder="Year"
-            onChange={(event) => setYear(event.target.value)}
+            title={"Year"}
+            type={"string"}
+            idValue={"year"}
+            onChangeType={setYear}
+            inputType={"input"}
+            placeholder={"Year"}
           />
-        </Form>
-        <Text>Introductions</Text>
-        <PersonPhoto src={Photo} alt="Person Photo" />
-        {/* need upload photot option */}
-        <AddPhotoButton placeholder="Add Photo" type="submit">
-          Add Photo
-        </AddPhotoButton>
-        <Form>
+          <Text>Introductions</Text>
+          <PersonPhoto
+            title={"Image"}
+            type={"string"}
+            idValue={"image"}
+            onChangeType={setIntroImage}
+            inputType={"input"}
+          />
+          <AddPhotoButton placeholder="Add Photo" type="submit">
+            Add Photo
+          </AddPhotoButton>
+          <br />
           <Input
-            type="text"
-            value={name}
-            placeholder="Name"
-            onChange={(event) => setName(event.target.value)}
+            title={"Name"}
+            type={"name"}
+            idValue={"name"}
+            onChangeType={setName}
+            inputType={"input"}
+            placeholder={"Name"}
           />
           <br />
           <Input
-            type="text"
-            value={introDescription}
-            placeholder="Description"
-            onChange={(event) => setIntroDescription(event.target.value)}
+            title={"IntroDescription"}
+            type={"introDescription"}
+            idValue={"introDescription"}
+            onChangeType={setIntroDescription}
+            inputType={"input"}
+            placeholder={"Description"}
           />
           <br />
-          <SubmitButton placeholder="Add Person" type="submit">
+          <SubmitButton
+            onClick={createPost}
+            placeholder="Add Person"
+            type="submit"
+          >
             Add Another Person
           </SubmitButton>
         </Form>

@@ -8,12 +8,11 @@ import NavBar from "./components/NavBar";
 import ArchivesPage from "./components/ArchivesPage/ArchivesPage";
 import AdminForm from "./components/adminFrom/adminForm";
 
-
 const App = () => (
   <Router>
     <NavBar />
     <Switch>
-      <Route path="/" exact component={LandingPage} isProtected={false} />
+      <Route path="/" exact component={LandingPage} isProtected={false} /> 
       <Route path="/adminForm" exact component={AdminForm} isProtected={false} />
       <Route
         path="/trainings-page"
