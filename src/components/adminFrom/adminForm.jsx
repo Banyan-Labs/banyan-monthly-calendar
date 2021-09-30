@@ -118,7 +118,47 @@ const AdminForm = () => {
           >
             Add Another Person
           </SubmitButton>
+
+          <Input
+            type="text"
+            value={year}
+            placeholder="Year"
+            onChange={(event) => setYear(event.target.value)}
+          />
         </Form>
+        <Text>Trainings</Text>
+        <PersonPhoto src={BillyJimBobWithAWig} alt="Person Photo" />
+        {/* need upload photot option */}
+        <AddPhotoButton placeholder="Add Photo" type="submit">
+          Add Photo
+        </AddPhotoButton>
+        <Form>
+          <Input
+            type="text"
+            value={name}
+            placeholder="Training Title"
+            onChange={(event) => setName(event.target.value)}
+          />
+          <br />
+          <Input
+            type="text"
+            value={description}
+            placeholder="Traning Description"
+            onChange={(event) => setDescription(event.target.value)}
+          />
+          <br />
+          <Input
+            type="text"
+            value={description}
+            placeholder="Role"
+            onChange={(event) => setDescription(event.target.value)}
+          />
+          <SubmitButton placeholder="Add Person" type="submit">
+            Add Another Person
+          </SubmitButton>
+        </Form>
+
+        
       </Container>
     </>
   );
