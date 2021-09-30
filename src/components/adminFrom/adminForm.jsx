@@ -20,7 +20,7 @@ const AdminForm = () => {
   const [name, setName] = useState("");
   const [introDescription, setIntroDescription] = useState("");
   const [introImage, setIntroImage] = useState("");
-  const url = "http://localhost:8080/api/month";
+  const url = "https://banyan-cmc-backend.herokuapp.com/api/month";
   const options = [
     { key: 1, text: "Select Month" },
     { key: 2, text: "January" },
@@ -43,11 +43,11 @@ const AdminForm = () => {
     introDescription: introDescription,
   };
 
-  useEffect(() => {
-  axios.get(url).then((response) => {
-    postObject(response.data);
-  });
-}, []);
+//   useEffect(() => {
+//   axios.get(url).then((response) => {
+//     postObject(response.data);
+//   });
+// }, []);
 
   function createPost() {
     axios.post(url, postObject).then((res) => {
