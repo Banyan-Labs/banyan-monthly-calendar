@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding: 2rem 2rem;
+  margin-bottom: 4%;
 `;
 export const Text = styled.div`
   display: flex;
@@ -36,7 +37,6 @@ export const AddPhotoButton = styled.button`
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   padding: 1rem;
   box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 `;
