@@ -1,35 +1,43 @@
-import React from "react";
-import ProfileCard from './ProfileCard'
+import React, { useEffect, useState } from "react";
+import ProfileCard from "./ProfileCard";
 import { Container } from "./style";
+import axios from "axios";
 
 const ProfileCards = () => {
-  const Mockdata = [
-    {
-      img: "",
-      name: "Shandea",
-      text:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt distinctio corrupti quam commodi ipsa cum blanditiis ab ullam aliquid velit necessitatibus alias beatae dicta, ex iste quis repellendus maiores suscipit?",
-    },
-    {
-      img: "",
-      name: "Stephanie",
-      text:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt distinctio corrupti quam commodi ipsa cum blanditiis ab ullam aliquid velit necessitatibus alias beatae dicta, ex iste quis repellendus maiores suscipit?",
-    },
-    {
-      img: "",
-      name: "Greg",
-      text:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt distinctio corrupti quam commodi ipsa cum blanditiis ab ullam aliquid velit necessitatibus alias beatae dicta, ex iste quis repellendus maiores suscipit?",
-    },
-  ];
+  const url = "https://banyan-cmc-backend.herokuapp.com/api/month";
+  const [cardsToDisplay, setCardsToDisplay] = useState([]);
+  const [currentMonth, setCurrentMonth] = useState(
+    new Date().toLocaleDateString("en-US", {
+      month: "long",
+    })
+  );
+  const apiGetProfileCardData = async () => {
+    await axios
+      .get(url)
+      .then((res) => {
+        if (res.data) {
+          setCardsToDisplay(res.data.filter((card) => card.month === currentMonth)[0]["introductions"]);
+        }
+      })
+      .catch((err) => console.error(err.message));
+  };
+  useEffect(() => {
+    apiGetProfileCardData();
+  }, []);
 
   return (
-  <Container>
-      {Mockdata && Mockdata.map((userdata, index) => (
-        <ProfileCard img={userdata.img} name={userdata.name} text={userdata.text} key={index}/>
-      ))}
-  </Container>
+    <Container>
+      {cardsToDisplay &&
+        cardsToDisplay
+          .map((data, index) => (
+            <ProfileCard
+              img={data.introImage}
+              name={data.name}
+              text={data.introDescription}
+              key={index}
+            />
+          ))}
+    </Container>
   );
 };
 
