@@ -1,16 +1,21 @@
-import React, { useState, useEffect } from "react";
-import SearchBar from "../SearchBar/SearchBar";
-import PreviousCallsList from "./PreviousCalls";
-import { Container, Text, Wrapper } from "./style";
-import mockData2 from "./PreviousCalls/mockData2";
+import React, { useState, useEffect } from 'react'
+import SearchBar from '../SearchBar/SearchBar'
+import PreviousCallsList from './PreviousCalls'
+import { Container, Text, Wrapper } from './style'
+import mockData2 from './PreviousCalls/mockData2'
+import axios from 'axios'
 
 const ArchivesPage = () => {
-  const [input, setInput] = useState("");
-  const [previousCallsList, setPreviousCallsList] = useState([]);
+  const [input, setInput] = useState('')
+  const [previousCallsList, setPreviousCallsList] = useState([])
+  const url = 'https://banyan-cmc-backend.herokuapp.com/api/month'
 
   useEffect(() => {
-    setPreviousCallsList(mockData2);
-  }, []);
+    axios.get(url).then(res => {
+      setPreviousCallsList(res.data)
+      console.log(res.data.map((card) => card.month))
+    })
+  }, [])
 
   return (
     <Container>
@@ -23,7 +28,7 @@ const ArchivesPage = () => {
         searchQuery={input}
       />
     </Container>
-  );
-};
+  )
+}
 
-export default ArchivesPage;
+export default ArchivesPage
