@@ -22,6 +22,7 @@ const AdminForm = () => {
   const [presenter, setPresenter] = useState("");
   const [trainingDescription, setTrainingDescription] = useState("");
   const [role, setRole] = useState("");
+  const [trainingImage, setTrainingImage] = useState("");
   const url = "https://banyan-cmc-backend.herokuapp.com/api/month";
   const options = [
     { key: 1, text: "Select Month" },
@@ -49,8 +50,9 @@ const AdminForm = () => {
     trainings: {
       trainingTitle: trainingTitle,
       presenter: presenter,
-      trainingDescription,
-      role,
+      trainingDescription: trainingDescription,
+      role: role,
+      trainingImage: trainingImage,
     },
   };
 
@@ -128,51 +130,52 @@ const AdminForm = () => {
           >
             Add Another Person
           </SubmitButton>
-        <Text>Trainings</Text>
-        {/* <PersonPhoto
-          title={"Image"}
-          type={"string"}
-          idValue={"image"}
-          onChange={(e) => setImage(e.currentTarget.value)}
-          inputType={"input"}
-        />
-        <AddPhotoButton placeholder="Add Photo" type="submit">
-          Add Photo
-        </AddPhotoButton> */}
+          <Text>Trainings</Text>
+          <PersonPhoto
+            title={"TrainingImage"}
+            type={"string"}
+            idValue={"trainingImage"}
+            onChange={(e) => setTrainingImage(e.currentTarget.value)}
+            inputType={"input"}
+          />
+          <AddPhotoButton placeholder="Add Photo" type="submit">
+            Add Photo
+          </AddPhotoButton>
+          <br />
           <Input
-               title={"TrainingTitle"}
-               type={"trainingTitle"}
-               idValue={"trainingTitle"}
-               onChange={(e) => setTrainingTitle(e.currentTarget.value)}
-               inputType={"input"}
-               placeholder={"Training Title"}
+            title={"TrainingTitle"}
+            type={"trainingTitle"}
+            idValue={"trainingTitle"}
+            onChange={(e) => setTrainingTitle(e.currentTarget.value)}
+            inputType={"input"}
+            placeholder={"Training Title"}
           />
           <br />
           <Input
-               title={"TrainingDescription"}
-               type={"trainingDescription"}
-               idValue={"trainingDescription"}
-               onChange={(e) => setTrainingDescription(e.currentTarget.value)}
-               inputType={"input"}
-               placeholder={"Training Description"}
+            title={"TrainingDescription"}
+            type={"trainingDescription"}
+            idValue={"trainingDescription"}
+            onChange={(e) => setTrainingDescription(e.currentTarget.value)}
+            inputType={"input"}
+            placeholder={"Training Description"}
           />
           <br />
           <Input
-               title={"Presenter"}
-               type={"presenter"}
-               idValue={"presenter"}
-               onChange={(e) => setPresenter(e.currentTarget.value)}
-               inputType={"input"}
-               placeholder={"Presenter"}
+            title={"Presenter"}
+            type={"presenter"}
+            idValue={"presenter"}
+            onChange={(e) => setPresenter(e.currentTarget.value)}
+            inputType={"input"}
+            placeholder={"Presenter"}
           />
           <br />
           <Input
-               title={"Role"}
-               type={"role"}
-               idValue={"role"}
-               onChange={(e) => setRole(e.currentTarget.value)}
-               inputType={"input"}
-               placeholder={"Role"}
+            title={"Role"}
+            type={"role"}
+            idValue={"role"}
+            onChange={(e) => setRole(e.currentTarget.value)}
+            inputType={"input"}
+            placeholder={"Role"}
           />
           <br />
           <SubmitButton placeholder="Add Training" type="submit">
