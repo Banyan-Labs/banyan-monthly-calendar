@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import {
@@ -11,10 +11,11 @@ import {
   AddPhotoButton,
   Select,
 } from "./style";
-// import Photo from "../../resource/images/avatar.png";
+
+
+
 
 const AdminForm = () => {
-  const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
   const [name, setName] = useState("");
   const [introDescription, setIntroDescription] = useState("");
@@ -23,7 +24,7 @@ const AdminForm = () => {
   const options = [
     { key: 1, text: "Select Month" },
     { key: 2, text: "January" },
-    { key: 3, text: "February" },
+    { key: 3, text: "Febuary" },
     { key: 4, text: "March" },
     { key: 5, text: "April" },
     { key: 6, text: "May" },
@@ -37,33 +38,22 @@ const AdminForm = () => {
   ];
   const postObject = {
     year: year,
-    month: month,
-    trainings: {},
-    introductions: {
-      name: name,
-      introImage: introImage,
-      introDescription: introDescription,
-    },
+    name: name,
+    introImage: introImage,
+    introDescription: introDescription,
   };
 
-  //   useEffect(() => {
-  //   axios.get(url).then((response) => {
-  //     postObject(response.data);
-  //   });
-  // }, []);
+//   useEffect(() => {
+//   axios.get(url).then((response) => {
+//     postObject(response.data);
+//   });
+// }, []);
 
   function createPost() {
-    //console.log("try to post", JSON.stringify(postObject, null, 4));
-
-    axios({
-      method: "post",
-      url: url,
-      data: postObject,
-    })
-      .then((res) => console.log("success", res.data))
-      .catch((error) => console.log(error));
+    axios.post(url, postObject).then((res) => {
+      console.log(res.data);
+    });
   }
-
   const history = useHistory();
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -74,8 +64,8 @@ const AdminForm = () => {
     <>
       <Container>
         <Form onSubmit={handleSubmit}>
-          <Text>Date</Text>
-          <Select onChange={(e) => setMonth(e.currentTarget.value)}>
+        <Text>Date</Text>
+          <Select>
             {options.map((option) => (
               <option key={option.key} value={option.text}>
                 {option.text}
@@ -87,7 +77,7 @@ const AdminForm = () => {
             title={"Year"}
             type={"string"}
             idValue={"year"}
-            onChange={(e) => setYear(e.currentTarget.value)}
+            onChange={(e) => setYear(e.target.value)}
             inputType={"input"}
             placeholder={"Year"}
           />
@@ -96,7 +86,7 @@ const AdminForm = () => {
             title={"Image"}
             type={"string"}
             idValue={"image"}
-            onChange={(e) => setIntroImage(e.currentTarget.value)}
+            onChange={(e) => setIntroImage(e.target.value)}
             inputType={"input"}
           />
           <AddPhotoButton placeholder="Add Photo" type="submit">
@@ -107,7 +97,7 @@ const AdminForm = () => {
             title={"Name"}
             type={"name"}
             idValue={"name"}
-            onChange={(e) => setName(e.currentTarget.value)}
+            onChange={(e) => setName(e.target.value)}
             inputType={"input"}
             placeholder={"Name"}
           />
@@ -116,7 +106,7 @@ const AdminForm = () => {
             title={"IntroDescription"}
             type={"introDescription"}
             idValue={"introDescription"}
-            onChange={(e) => setIntroDescription(e.currentTarget.value)}
+            onChange={(e) => setIntroDescription(e.target.value)}
             inputType={"input"}
             placeholder={"Description"}
           />
@@ -128,18 +118,11 @@ const AdminForm = () => {
           >
             Add Another Person
           </SubmitButton>
-
-          <Input
-            type="text"
-            value={year}
-            placeholder="Year"
-            onChange={(event) => setYear(event.target.value)}
-          />
         </Form>
-        <Text>Trainings</Text>
+        {/* <Text>Trainings</Text>
         <PersonPhoto src={BillyJimBobWithAWig} alt="Person Photo" />
         {/* need upload photot option */}
-        <AddPhotoButton placeholder="Add Photo" type="submit">
+        {/* <AddPhotoButton placeholder="Add Photo" type="submit">
           Add Photo
         </AddPhotoButton>
         <Form>
@@ -165,8 +148,8 @@ const AdminForm = () => {
           />
           <SubmitButton placeholder="Add Person" type="submit">
             Add Another Person
-          </SubmitButton>
-        </Form>
+          </SubmitButton> */}
+        {/* </Form> */}
 
         
       </Container>

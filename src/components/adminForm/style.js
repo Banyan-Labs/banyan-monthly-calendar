@@ -27,7 +27,8 @@ export const PersonPhoto = styled.div`
   align-items: center;
 `;
 export const AddPhotoButton = styled.button`
-  margin-left: 46.5%;
+  margin-left: 45%;
+  width: 10%;
   padding: 16px;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
