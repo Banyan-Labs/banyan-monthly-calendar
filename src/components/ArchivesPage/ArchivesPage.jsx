@@ -13,7 +13,7 @@ const ArchivesPage = () => {
   useEffect(() => {
     axios.get(url).then(res => {
       setPreviousCallsList(res.data)
-      console.log(res.data.map((card) => card.month))
+      console.log(res.data)
     })
   }, [])
 
