@@ -8,22 +8,22 @@ import PreviousTitle from "./PreviousTrainings/PreviousTitle";
 import axios from 'axios';
 
 const TrainingsPage = () => {
-  // const [input, setInput] = useState("");
-  // const [trainingsList, setTrainingsList] = useState([]);
-
-  // useEffect(() => {
-  //   setTrainingsList(mockData);
-  // }, []);
-  const [input, setInput] = useState('')
-  const [trainingsList, setTrainingsList] = useState([])
-  const url = 'https://banyan-cmc-backend.herokuapp.com/api/month'
+  const [input, setInput] = useState("");
+  const [trainingsList, setTrainingsList] = useState([]);
 
   useEffect(() => {
-    axios.get(url).then(res => {
-      setTrainingsList(res.data)
-      console.log(res.data)
-    })
+    setTrainingsList(mockData);
   }, []);
+  // const [input, setInput] = useState('')
+  // const [trainingsList, setTrainingsList] = useState([])
+  // const url = 'https://banyan-cmc-backend.herokuapp.com/api/month'
+
+  // useEffect(() => {
+  //   axios.get(url).then(res => {
+  //     setTrainingsList(res.data)
+  //     console.log(res.data)
+  //   })
+  // }, []);
 
   return (
     <BrowserRouter>
