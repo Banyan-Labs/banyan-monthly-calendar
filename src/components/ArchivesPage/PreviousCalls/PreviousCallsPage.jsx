@@ -5,7 +5,7 @@ const PreviousCallsPage = ({ previousCallsList }) => {
     <div>
       {previousCallsList.map((data, index) => (
         <div key={index}>
-          <h1>{data.title}</h1>
+          <h1>{data.month}</h1>
         </div>
       ))}
     </div>

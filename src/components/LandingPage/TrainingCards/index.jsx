@@ -1,43 +1,55 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import TrainingCard from "./TrainingCard";
-import { Container } from './style';
-
-
-
+import { Container } from "./style";
+import axios from "axios";
 
 const TrainingCards = () => {
-  const FakeData = [
-    {
-      title:"Mindfulness",
-      role:"Re-entry Manager",
-      presenter:"Julie Landers",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt repudiandae et explicabo inventore dignissimos asperiores ut aut aspernatur vitae officia?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aliquam velit id hic reiciendis iusto excepturi vel dolor provident cupiditate.",
-      img: ""
-    },
-    {
-      title:"Mindfulness",
-      role:"Re-entry Manager",
-      presenter:"Julie Landers",
-      text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit voluptatum ducimus perferendis laudantium possimus illum exercitationem sit est ut repellendus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aliquam velit id hic reiciendis iusto excepturi vel dolor provident cupiditate.",
-      img: ""
-    }
-  ]
+  const url = "https://banyan-cmc-backend.herokuapp.com/api/month";
+  const [cardsToDisplay, setCardsToDisplay] = useState([]);
+  const [currentMonth, setCurrentMonth] = useState(
+    new Date().toLocaleDateString("en-US", {
+      month: "long",
+    })
+  );
+  const apiGetProfileCardData = async () => {
+    await axios
+      .get(url)
+      .then((res) => {
+        if (res.data) {
+          setCardsToDisplay(
+            res.data.filter((card) => card.month === currentMonth)[0][
+              "trainings"
+            ]
+          );
+        }
+      })
+      .catch((err) => console.error(err.message));
+  };
+  useEffect(() => {
+    apiGetProfileCardData();
+  }, []);
+
   return (
     <Container>
-      {FakeData && 
+      {cardsToDisplay &&
+        cardsToDisplay.map((data, index) => (
+          <TrainingCard
+            title={data.trainingTitle}
+            img={data.trainingImage}
+            name={data.presenter}
+            text={data.trainingDescription}
+            role={data.role}
+            key={index}
+          />
+        ))}
+      {/* {FakeData && 
       FakeData.map((userdata,index)=> (
         <TrainingCard
           cardData={userdata}
         />
- ))}
-     
- 
-   
+ ))} */}
     </Container>
-
-    
   );
 };
 
-  
-  export default TrainingCards
+export default TrainingCards;
