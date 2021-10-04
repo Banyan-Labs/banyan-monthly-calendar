@@ -3,7 +3,7 @@ import { Card, Presenter, Title, Headshot, Text, FirstInitial, Wrapper, Wrapper2
 
 
 const TrainingCard = ({  name, img, text, title, role }) => {
-    // const { } = cardData
+
     return (
         <Card>
             <Wrapper>
@@ -14,9 +14,9 @@ const TrainingCard = ({  name, img, text, title, role }) => {
                     {text && text}
                 </Text>
                 <Wrapper2>
-                    <Headshot>{img ? img : <FirstInitial> {name[0].toUpperCase()}</FirstInitial>} </Headshot>
+                <Headshot>{img ? img : <FirstInitial> {name && name[0].toUpperCase()}</FirstInitial>} </Headshot>
                     <Presenter>
-                        Presented by: {name && name}
+                    Presented by: {name && name}
                         <br />
                         Role: {role && role}
                     </Presenter>
@@ -24,8 +24,6 @@ const TrainingCard = ({  name, img, text, title, role }) => {
                 </Wrapper2>
             </Wrapper>
         </Card>
-
     )
 }
-
 export default TrainingCard

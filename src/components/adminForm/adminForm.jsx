@@ -8,7 +8,6 @@ import {
   Text,
   SubmitButton,
   PersonPhoto,
-  AddPhotoButton,
   Select,
 } from "./style";
 
@@ -75,7 +74,6 @@ const AdminForm = () => {
   return (
     <>
       <Container>
-        
         <Form onSubmit={handleSubmit}>
           <Text>Date</Text>
           <Select onChange={(e) => setMonth(e.currentTarget.value)}>
@@ -112,7 +110,6 @@ const AdminForm = () => {
             placeholder={"Name"}
           />
           <br />
-          
           <Input
             title={"IntroDescription"}
             type={"introDescription"}
@@ -121,18 +118,9 @@ const AdminForm = () => {
             inputType={"input"}
             placeholder={"Description"}
           />
-          <br />
-          <SubmitButton
-            onClick={createPost}
-            placeholder="Add Person"
-            type="submit"
-          >
-            Add Another Person
-          </SubmitButton>
-          </Form>
-          <br />
-          <Form>
-            
+        </Form>
+        <br />
+        <Form>
           <Text>Trainings</Text>
           <PersonPhoto
             title={"TrainingImage"}
@@ -178,13 +166,9 @@ const AdminForm = () => {
             placeholder={"Role"}
           />
           <br />
-            <SubmitButton
-            onClick={createPost}
-            placeholder="Submit"
-            type="submit"
-          >
+          <SubmitButton onClick={createPost} placeholder="Submit" type="submit">
             Submit
-          </SubmitButton> 
+          </SubmitButton>
         </Form>
       </Container>
     </>
