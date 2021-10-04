@@ -27,7 +27,7 @@ const SignInModal = () => {
       <ToggleButton onClick={toggleModal}>Sign In</ToggleButton>
       <ModalContainer isOpen={isModalOpen}>
         <ModalCard>
-          <CloseButton onClick={toggleModal}>Close</CloseButton>
+          <CloseButton onClick={toggleModal}>X</CloseButton>
           <Form onSubmit={onSubmit}>
             <Input
               type="text"
