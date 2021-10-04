@@ -5,13 +5,14 @@ import axios from "axios";
 
 const TrainingCards = () => {
   const url = "https://banyan-cmc-backend.herokuapp.com/api/month";
+
   const [cardsToDisplay, setCardsToDisplay] = useState([]);
   const [currentMonth, setCurrentMonth] = useState(
     new Date().toLocaleDateString("en-US", {
       month: "long",
     })
   );
-  const apiGetProfileCardData = async () => {
+  const apiGetTrainingCardData = async () => {
     await axios
       .get(url)
       .then((res) => {
@@ -26,12 +27,12 @@ const TrainingCards = () => {
       .catch((err) => console.error(err.message));
   };
   useEffect(() => {
-    apiGetProfileCardData();
+    apiGetTrainingCardData();
   }, []);
 
   return (
     <Container>
-      {cardsToDisplay &&
+    {cardsToDisplay &&
         cardsToDisplay.map((data, index) => (
           <TrainingCard
             title={data.trainingTitle}
@@ -42,14 +43,7 @@ const TrainingCards = () => {
             key={index}
           />
         ))}
-      {/* {FakeData && 
-      FakeData.map((userdata,index)=> (
-        <TrainingCard
-          cardData={userdata}
-        />
- ))} */}
-    </Container>
-  );
-};
-
-export default TrainingCards;
+        </Container>
+         );
+        };
+        export default TrainingCards;
