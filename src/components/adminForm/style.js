@@ -14,7 +14,10 @@ export const Text = styled.div`
     font-size: 10px;
   }
 `;
+
 export const Select = styled.select`
+margin: 0% 0% 1% 45%;
+width:10%;
   padding: 3px;
 `;
 export const PersonPhoto = styled.div`
@@ -28,7 +31,8 @@ export const PersonPhoto = styled.div`
   align-items: center;
 `;
 export const AddPhotoButton = styled.button`
-  margin-left: 45%;
+border:none;
+  margin-left: 45.5%;
   width: 10%;
   padding: 16px;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
@@ -41,11 +45,18 @@ export const Form = styled.form`
   box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 `;
 export const Input = styled.input`
-  padding: 3px;
+margin: 0% 0% 1% 25%;
+  border:none;
+  height:30px;
+  width:50%;
+  padding: 13px;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 `;
 export const SubmitButton = styled.button`
-  padding: 16px;
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+border:none;
+margin: 0% 0% 1% 36%;
+width:30%;
+   padding: 16px;
+   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+   0 17px 50px 0 rgba(0, 0, 0, 0.19);
 `;
