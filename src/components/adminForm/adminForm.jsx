@@ -75,6 +75,7 @@ const AdminForm = () => {
   return (
     <>
       <Container>
+        
         <Form onSubmit={handleSubmit}>
           <Text>Date</Text>
           <Select onChange={(e) => setMonth(e.currentTarget.value)}>
@@ -101,9 +102,6 @@ const AdminForm = () => {
             onChange={(e) => setIntroImage(e.currentTarget.value)}
             inputType={"input"}
           />
-          <AddPhotoButton placeholder="Add Photo" type="submit">
-            Add Photo
-          </AddPhotoButton>
           <br />
           <Input
             title={"Name"}
@@ -114,6 +112,7 @@ const AdminForm = () => {
             placeholder={"Name"}
           />
           <br />
+          
           <Input
             title={"IntroDescription"}
             type={"introDescription"}
@@ -130,6 +129,10 @@ const AdminForm = () => {
           >
             Add Another Person
           </SubmitButton>
+          </Form>
+          <br />
+          <Form>
+            
           <Text>Trainings</Text>
           <PersonPhoto
             title={"TrainingImage"}
@@ -138,9 +141,6 @@ const AdminForm = () => {
             onChange={(e) => setTrainingImage(e.currentTarget.value)}
             inputType={"input"}
           />
-          <AddPhotoButton placeholder="Add Photo" type="submit">
-            Add Photo
-          </AddPhotoButton>
           <br />
           <Input
             title={"TrainingTitle"}
@@ -178,9 +178,13 @@ const AdminForm = () => {
             placeholder={"Role"}
           />
           <br />
-          <SubmitButton placeholder="Add Training" type="submit">
-            Add Another Training
-          </SubmitButton>
+            <SubmitButton
+            onClick={createPost}
+            placeholder="Submit"
+            type="submit"
+          >
+            Submit
+          </SubmitButton> 
         </Form>
       </Container>
     </>

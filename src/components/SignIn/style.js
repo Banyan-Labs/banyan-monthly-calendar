@@ -32,26 +32,35 @@ export const CloseButton = styled.button`
   top: 0;
   right: 0;
   margin: 10px;
-  padding: 16px;
+  padding: 10px;
+  border: none;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
 `;
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 10rem;
+  padding: 5rem;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
 `;
 export const Input = styled.input`
   padding: 10px;
-  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  border:none;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+  0 17px 50px 0 rgba(0, 0, 0, 0.19);
 `;
 export const SubmitButton = styled.button`
   padding: 16px;
+  border: none;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    
+   
 `;
 export const Link = styled(LinkR)`
   padding-right: 20px;
