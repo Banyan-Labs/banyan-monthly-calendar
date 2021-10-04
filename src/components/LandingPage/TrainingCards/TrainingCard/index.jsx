@@ -2,8 +2,8 @@ import React from 'react';
 import { Card, Presenter, Title, Headshot, Text, FirstInitial, Wrapper, Wrapper2 } from './style';
 
 
-const TrainingCard = ({  name, img, text, title, role }) => {
-    // const { } = cardData
+const TrainingCard = ({ cardData }) => {
+    const {presenter, img, text, title, role } = cardData
     return (
         <Card>
             <Wrapper>
@@ -14,9 +14,9 @@ const TrainingCard = ({  name, img, text, title, role }) => {
                     {text && text}
                 </Text>
                 <Wrapper2>
-                    <Headshot>{img ? img : <FirstInitial> {name[0].toUpperCase()}</FirstInitial>} </Headshot>
+                    <Headshot>{img ? img : <FirstInitial> {presenter[0].toUpperCase()}</FirstInitial>} </Headshot>
                     <Presenter>
-                        Presented by: {name && name}
+                        Presented by: {presenter && presenter}
                         <br />
                         Role: {role && role}
                     </Presenter>
