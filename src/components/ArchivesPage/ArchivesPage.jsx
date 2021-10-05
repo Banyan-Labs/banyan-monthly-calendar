@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import SearchBar from '../SearchBar/SearchBar'
 import PreviousCallsList from './PreviousCalls'
 import { Container, Text, Wrapper } from './style'
-import mockData2 from './PreviousCalls/mockData2'
 import axios from 'axios'
 
 const ArchivesPage = () => {
