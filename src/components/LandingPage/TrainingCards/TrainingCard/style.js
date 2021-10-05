@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Card = styled.div`
-    width: auto;
-    height: 353px;
-    margin: 47px 5px;
+    width: 100%;
+    height: 100%;
+    margin: 5px 5px ;
     background: rgba(196, 196, 196, 0.15);
     @media screen and (max-width: 750px) {
         padding:13px 0px 13px 0px;
@@ -61,33 +61,38 @@ export const Headshot = styled.div`
 
 export const Presenter = styled.div`
     margin-top:70px;
-    margin-right:170px;
+    padding:10px;
     text-align: center;
     font-size:20px;
     border-radius: 6px;
     text-align: center;
-    width: 270px;
-    height: 32px;
+    
+    background: #c4c4c4;
+    
 `;
 
 export const Img = styled.div`
     width:50%;
     border-radius:50%;
+   
+   
 `;
 
 export const Text = styled.div`
     padding:10px;
     border-radius: 6px;
     background: #c4c4c4;
-    width: 100%;
+    width: 96%;
     height: 100%;
-    margin:20px 10px 0px 0px;
+    margin:20px 30px 0px 0px;
     text-align: left;
+    
 `;
 
 export const FirstInitial = styled.div`
     font-size: 65px;
     font-weight: 900px;
+    
 `;
 
 
