@@ -14,7 +14,7 @@ const TrainingCard = ({  name, img, text, title, role }) => {
                     {text && text}
                 </Text>
                 <Wrapper2>
-                <Headshot>{img ? img : <FirstInitial> {name[0].toUpperCase()}</FirstInitial>} </Headshot>
+                <Headshot>{img ? img : <FirstInitial> {name && name[0].toUpperCase()}</FirstInitial>} </Headshot>
                     <Presenter>
                     Presented by: {name && name}
                         <br />
