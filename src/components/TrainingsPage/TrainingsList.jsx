@@ -6,8 +6,8 @@ const TrainingsList = ({ trainingsList, searchQuery }) => (
     {trainingsList
       .filter(
         (data) =>
-          new RegExp(`^${searchQuery}`, "i").test(data.title) ||
-          new RegExp(`^${searchQuery}`, "i").test(data.presenter)
+          new RegExp(`^${searchQuery}`, "i").test(data.trainings[0].trainingTitle) ||
+          new RegExp(`^${searchQuery}`, "i").test(data.trainings[0].presenter)
       )
       .map((data, index) => (
         <div key={index}>
