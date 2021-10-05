@@ -16,7 +16,11 @@ const ProfileCards = () => {
       .get(url)
       .then((res) => {
         if (res.data) {
-          setCardsToDisplay(res.data.filter((card) => card.month === currentMonth)[0]["introductions"]);
+          setCardsToDisplay(
+            res.data.filter((card) => card.month === currentMonth)[0][
+              "introductions"
+            ]
+          );
         }
       })
       .catch((err) => console.error(err.message));
@@ -28,15 +32,14 @@ const ProfileCards = () => {
   return (
     <Container>
       {cardsToDisplay &&
-        cardsToDisplay
-          .map((data, index) => (
-            <ProfileCard
-              img={data.introImage}
-              name={data.name}
-              text={data.introDescription}
-              key={index}
-            />
-          ))}
+        cardsToDisplay.map((data, index) => (
+          <ProfileCard
+            img={data.introImage}
+            name={data.name}
+            text={data.introDescription}
+            key={index}
+          />
+        ))}
     </Container>
   );
 };
