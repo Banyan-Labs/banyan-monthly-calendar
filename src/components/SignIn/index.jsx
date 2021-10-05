@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router";
 import {
   ToggleButton,
   ModalContainer,
@@ -17,9 +18,12 @@ const SignInModal = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const history = useHistory();
+
   const onSubmit = (e) => {
     e.preventDefault();
-    setIsModalOpen(false);
+    toggleModal();
+    history.push('/adminForm');
   };
 
   return (
@@ -27,13 +31,14 @@ const SignInModal = () => {
       <ToggleButton onClick={toggleModal}>Sign In</ToggleButton>
       <ModalContainer isOpen={isModalOpen}>
         <ModalCard>
-          <CloseButton onClick={toggleModal}>Close</CloseButton>
+          <CloseButton onClick={toggleModal}>X</CloseButton>
           <Form onSubmit={onSubmit}>
             <Input
               type="text"
               value={email}
               placeholder="Email"
               onChange={(event) => setEmail(event.target.value)}
+              required
             />
             <br />
             <Input
@@ -41,13 +46,12 @@ const SignInModal = () => {
               value={password}
               placeholder="password"
               onChange={(event) => setPassword(event.target.value)}
+              required
             />
             <br />
-            <Link to="/adminForm">
             <SubmitButton placeholder="submit" type="submit">
               Submit
             </SubmitButton>
-            </Link>
           </Form>
         </ModalCard>
       </ModalContainer>

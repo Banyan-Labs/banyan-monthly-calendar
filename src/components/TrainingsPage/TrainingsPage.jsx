@@ -3,15 +3,26 @@ import SearchBar from "../SearchBar/SearchBar";
 import { BrowserRouter } from "react-router-dom";
 import { Container, Wrapper1, Wrapper2 } from "./style";
 import TrainingsList from "./TrainingsList";
-import mockData from "../../mockData";
 import PreviousTitle from "./PreviousTrainings/PreviousTitle";
+import axios from "axios";
 
 const TrainingsPage = () => {
+  const url = "https://banyan-cmc-backend.herokuapp.com/api/month";
   const [input, setInput] = useState("");
-  const [trainingsList, setTrainingsList] = useState([]);
+  const [trainingCardList, setTrainingCardList] = useState([]);
 
+  const apiGetAllTrainingsData = async () => {
+    await axios
+      .get(url)
+      .then((res) => {
+        if (res.data) {
+          setTrainingCardList(res.data);
+        }
+      })
+      .catch((err) => console.error(err.message));
+  };
   useEffect(() => {
-    setTrainingsList(mockData);
+    apiGetAllTrainingsData();
   }, []);
 
   return (
@@ -22,7 +33,12 @@ const TrainingsPage = () => {
           <SearchBar updateInput={setInput} />
         </Wrapper1>
         <Wrapper2>
-          <TrainingsList trainingsList={trainingsList} searchQuery={input} />
+          {trainingCardList && (
+            <TrainingsList
+              trainingsList={trainingCardList}
+              searchQuery={input}
+            />
+          )}
         </Wrapper2>
       </Container>
     </BrowserRouter>
