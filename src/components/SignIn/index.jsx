@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
+import swal from 'sweetalert';
 import {
   ToggleButton,
   ModalContainer,
@@ -8,7 +9,6 @@ import {
   Form,
   Input,
   SubmitButton,
-  Link,
 } from "./style";
 import { useAuth0 } from '@auth0/auth0-react';
 
@@ -25,8 +25,26 @@ const SignInModal = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+  const validBanyanEmail =  banyanEmailValidator(email);
+  if (!validBanyanEmail) {
+  swal({
+    text: "Please use Banyan Email",
+    icon: "warning",
+  });
+  
+   return
+  }
     toggleModal();
     history.push('/adminForm');
+  };
+
+  const banyanEmailValidator = (email) => {
+    const splitEmail = email.trim().split('@');
+    console.log(splitEmail)
+    if (splitEmail.length == 2 && splitEmail[1].toLowerCase() === 'banyanlabs.io') {
+      return true
+    };
+    return false
   };
 
   return (
