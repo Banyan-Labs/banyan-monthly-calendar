@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
+
 export const ToggleButton = styled.button`
   padding: 8px;
   transition: all 0.2s ease-in-out;
