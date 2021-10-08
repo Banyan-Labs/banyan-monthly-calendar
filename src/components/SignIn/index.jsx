@@ -10,10 +10,13 @@ import {
   SubmitButton,
   Link,
 } from "./style";
+import { useAuth0 } from '@auth0/auth0-react';
 
 const SignInModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const toggleModal = () => setIsModalOpen(!isModalOpen);
+  const {  loginWithRedirect, isAuthenticated, isLoading, user } =
+  useAuth0();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,7 +31,7 @@ const SignInModal = () => {
 
   return (
     <>
-      <ToggleButton onClick={toggleModal}>Sign In</ToggleButton>
+     {!isAuthenticated && <ToggleButton onClick={()=>loginWithRedirect()}>Sign In</ToggleButton>}
       <ModalContainer isOpen={isModalOpen}>
         <ModalCard>
           <CloseButton onClick={toggleModal}>X</CloseButton>
