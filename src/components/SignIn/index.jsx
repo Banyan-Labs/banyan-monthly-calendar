@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
-import swal from 'sweetalert';
+import swal from "sweetalert";
 import {
   ToggleButton,
   ModalContainer,
@@ -10,13 +10,12 @@ import {
   Input,
   SubmitButton,
 } from "./style";
-import { useAuth0 } from '@auth0/auth0-react';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const SignInModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const toggleModal = () => setIsModalOpen(!isModalOpen);
-  const {  loginWithRedirect, isAuthenticated, isLoading, user } =
-  useAuth0();
+  const { loginWithRedirect, isAuthenticated, isLoading, user } = useAuth0();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,31 +24,36 @@ const SignInModal = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-  const validBanyanEmail =  banyanEmailValidator(email);
-  if (!validBanyanEmail) {
-  swal({
-    text: "Please use Banyan Email",
-    icon: "warning",
-  });
-  
-   return
-  }
+    const validBanyanEmail = banyanEmailValidator(email);
+    if (!validBanyanEmail) {
+      swal({
+        text: "Please use Banyan Email",
+        icon: "warning",
+      });
+
+      return;
+    }
     toggleModal();
-    history.push('/adminForm');
+    history.push("/adminForm");
   };
 
   const banyanEmailValidator = (email) => {
-    const splitEmail = email.trim().split('@');
-    console.log(splitEmail)
-    if (splitEmail.length == 2 && splitEmail[1].toLowerCase() === 'banyanlabs.io') {
-      return true
-    };
-    return false
+    const splitEmail = email.trim().split("@");
+    console.log(splitEmail);
+    if (
+      splitEmail.length == 2 &&
+      splitEmail[1].toLowerCase() === "banyanlabs.io"
+    ) {
+      return true;
+    }
+    return false;
   };
 
   return (
     <>
-     {!isAuthenticated && <ToggleButton onClick={()=>loginWithRedirect()}>Sign In</ToggleButton>}
+      {!isAuthenticated && (
+        <ToggleButton onClick={() => loginWithRedirect()}>Sign In</ToggleButton>
+      )}
       <ModalContainer isOpen={isModalOpen}>
         <ModalCard>
           <CloseButton onClick={toggleModal}>X</CloseButton>
