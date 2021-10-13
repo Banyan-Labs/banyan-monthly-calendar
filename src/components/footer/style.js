@@ -3,25 +3,17 @@ import { Link as LinkR } from "react-router-dom";
 
 export const Container = styled.footer`
   position: fixed;
+  width: 100%;
+  padding: 0.5em;
   display: flex;
   flex-direction: row wrap;
   justify-content: space-between;
   bottom: 0;
-  width: 100%;
-  height: 7%;
   background: #c4c4c4;
   color: #000;
-  @media screen and (max-width: 750px) {
-    padding: 13px 0px 13px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: right;
-  }
 `;
 export const Logo = styled.img`
-  margin: 10px 75px;
-  padding-bottom: 5px;
+  padding: 0.3em 0em 0em 0.5em;
   width: 100px;
   height: 30px;
   @media screen and (max-width: 750px) {
@@ -29,22 +21,25 @@ export const Logo = styled.img`
   }
 `;
 export const FooterLinksContainer = styled.div`
-  margin-right: 40px;
-  padding-top: 7px;
+  margin-right: 2em;
   color: #000 !important;
   @media screen and (max-width: 750px) {
-    margin-left: 13px;
+    margin-right: 1em;
     padding: 0px;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 `;
 export const FooterLink = styled(LinkR)`
   color: #000 !important;
-  padding-right: 20px;
+  padding: 0.3em;
   @media screen and (max-width: 750px) {
-    margin-left: 30px;
+    padding: 0.2em;
   }
 `;
 export const Button = styled.button`
-  background: gray;
+  padding: 0.2em;
+  margin: 0.1em;
 `;
