@@ -4,42 +4,21 @@ import { Link as LinkR } from "react-router-dom";
 export const Container = styled.div`
   background-color: #c4c4c4;
   width: 100%;
-  height: 55px;
+  margin: 0;
   display: flex;
   justify-content: space-between;
   flex-direction: row wrap;
-  @media screen and (max-width: 750px) {
-    display: flex;
-    justify-content: space-between;
-    padding: 13px 0px 0px 0px;
-    width: 100%;
-  }
 `;
 export const NavLinksContainer = styled.div`
-  margin: 12px 80px 0px 0px;
-  padding-top: 3px;
-  @media screen and (max-width: 750px) {
-    margin-left: 13px;
-    padding: 0px;
-    width: 100%;
-  }
+  margin: 1em;
 `;
 export const NavLinks = styled(LinkR)`
   color: #000000;
-  text-decoration: underline;
-  margin-left: 20px;
-  @media screen and (max-width: 750px) {
-    margin-left: 25px;
-    width: 100%;
-  }
+  padding-right: 0.5em;
 `;
 export const Logo = styled.img`
   height: 35px;
-  padding-bottom: 5px;
-  margin: 15px 25px;
+  margin: 1em;
   @media screen and (max-width: 750px) {
     height: 30px;
-    margin: 15px 0px 0px 10px;
-    width: 100%;
-  }
-`;
+
