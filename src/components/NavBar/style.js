@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 
 export const Container = styled.div`
-  background-color: #c4c4c4;
+  background-color: #29648a;
+  border-bottom:#0b3c5d solid px;
   width: 100%;
   height: 55px;
   display: flex;
@@ -25,8 +26,8 @@ export const NavLinksContainer = styled.div`
   }
 `;
 export const NavLinks = styled(LinkR)`
-  color: #000000;
-  text-decoration: underline;
+  color: white;
+  text-decoration:none;
   margin-left: 20px;
   @media screen and (max-width: 750px) {
     margin-left: 25px;

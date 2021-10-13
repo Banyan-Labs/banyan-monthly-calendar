@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Wrapper, Headshot, Name, Text, FirstInitial } from "./style";
 
+
 const ProfileCard = ({ img, name, text }) => (
   <Card>
     <Wrapper>

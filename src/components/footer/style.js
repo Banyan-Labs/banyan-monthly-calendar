@@ -9,7 +9,7 @@ export const Container = styled.footer`
   bottom: 0;
   width: 100%;
   height: 7%;
-  background: #c4c4c4;
+  background-color:#29658a;
   color: #000;
   @media screen and (max-width: 750px) {
     padding: 13px 0px 13px 0px;
@@ -39,8 +39,9 @@ export const FooterLinksContainer = styled.div`
   }
 `;
 export const FooterLink = styled(LinkR)`
-  color: #000 !important;
+  color: white !important;
   padding-right: 20px;
+  text-decoration:none;
   @media screen and (max-width: 750px) {
     margin-left: 30px;
   }
