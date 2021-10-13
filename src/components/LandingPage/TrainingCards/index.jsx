@@ -32,7 +32,7 @@ const TrainingCards = () => {
 
   return (
     <Container>
-    {cardsToDisplay &&
+      {cardsToDisplay &&
         cardsToDisplay.map((data, index) => (
           <TrainingCard
             title={data.trainingTitle}
@@ -43,7 +43,7 @@ const TrainingCards = () => {
             key={index}
           />
         ))}
-        </Container>
-         );
-        };
-        export default TrainingCards;
+    </Container>
+  );
+};
+export default TrainingCards;

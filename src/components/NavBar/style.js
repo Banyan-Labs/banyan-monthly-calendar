@@ -21,5 +21,4 @@ export const Logo = styled.img`
   margin: 1em;
   @media screen and (max-width: 750px) {
     height: 30px;
-  }
-`;
+

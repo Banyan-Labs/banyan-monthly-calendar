@@ -64,7 +64,6 @@ const AdminForm = () => {
       .then((res) => console.log("success", res.data))
       .catch((error) => console.log(error));
   }
-
   const history = useHistory();
   const handleSubmit = (e) => {
     e.preventDefault();

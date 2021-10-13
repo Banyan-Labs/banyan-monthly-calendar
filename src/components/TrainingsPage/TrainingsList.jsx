@@ -6,19 +6,21 @@ const TrainingsList = ({ trainingsList, searchQuery }) => (
     {trainingsList
       .filter(
         (data) =>
-          new RegExp(`^${searchQuery}`, "i").test(data.trainings[0].trainingTitle) ||
+          new RegExp(`^${searchQuery}`, "i").test(
+            data.trainings[0].trainingTitle
+          ) ||
           new RegExp(`^${searchQuery}`, "i").test(data.trainings[0].presenter)
       )
       .map((data, index) => (
         <div key={index}>
-          <h1>{data.trainings[0].trainingTitle}</h1>
-          <TrainingCard 
-         title={data.trainings[0].trainingTitle}
-           img={data.trainings[0].trainingImage}
-           name={data.trainings[0].presenter}
-           text={data.trainings[0].trainingDescription}
-           role={data.trainings[0].role}
-           key={index} />
+          <TrainingCard
+            title={data.trainings[0].trainingTitle}
+            img={data.trainings[0].trainingImage}
+            name={data.trainings[0].presenter}
+            text={data.trainings[0].trainingDescription}
+            role={data.trainings[0].role}
+            key={index}
+          />
         </div>
       ))}
   </div>
