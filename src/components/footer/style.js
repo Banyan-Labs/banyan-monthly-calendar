@@ -3,46 +3,56 @@ import { Link as LinkR } from "react-router-dom";
 
 export const Container = styled.footer`
   position: fixed;
+  width: 100%;
+  // padding: 0.5em;
   display: flex;
   flex-direction: row wrap;
   justify-content: space-between;
   bottom: 0;
-  width: 100%;
-  height: 7%;
+  height: 9%;
   background-color:#29658a;
-  color: #000;
-  @media screen and (max-width: 750px) {
-    padding: 13px 0px 13px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: right;
-  }
 `;
 export const Logo = styled.img`
-  margin: 10px 75px;
-  padding-bottom: 5px;
+  padding: 0.3em 0.3em 0.3em 0.3em;
   width: 100px;
   height: 30px;
   @media screen and (max-width: 750px) {
     display: none;
   }
 `;
+
+export const Wrapper = styled.div`
+  height: 35px;
+  padding: 0.5em;
+  background-color: white;
+  border-bottom: #29648a 1.5px solid ;
+  border-top: #29648a 1.5px solid ;
+`;
+
 export const FooterLinksContainer = styled.div`
-  margin-right: 40px;
-  padding-top: 7px;
+padding-top: 0.9em;
+  margin-right: 2em;
   color: #000 !important;
   @media screen and (max-width: 750px) {
-    margin-left: 13px;
+    margin-right: 1em;
     padding: 0px;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 `;
 export const FooterLink = styled(LinkR)`
   color: white !important;
-  padding-right: 20px;
   text-decoration:none;
+  padding: 0.3em;
   @media screen and (max-width: 750px) {
-    margin-left: 30px;
+    padding: 0.2em;
   }
+`;
+export const Button = styled.button`
+  padding: 0.2em;
+  margin: 0.1em;
+  background-color:#25274d;
+  color:white;
 `;

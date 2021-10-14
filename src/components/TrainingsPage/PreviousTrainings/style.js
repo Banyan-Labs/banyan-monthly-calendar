@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 5%;
-  width: 80%;
   @media screen and (max-width: 768px) {
     height: 2%;
     width: 20%;
@@ -12,6 +10,7 @@ export const Container = styled.div`
 `;
 export const Text = styled.div`
   font-size: 25px;
+  border-bottom: solid #29648a 3px;
   @media screen and (max-width: 768px) {
     font-size: 10px;
   }
