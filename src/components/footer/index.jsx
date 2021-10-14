@@ -1,5 +1,5 @@
 import React,{ useState, useEffect} from "react";
-import { Container, Logo, FooterLinksContainer, FooterLink, Button } from "./style";
+import { Container, Logo, FooterLinksContainer, FooterLink, Button, Wrapper } from "./style";
 import Banyanlabslogo from "../../resource/images/Banyanlabslogo.png";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useHistory } from "react-router-dom";
@@ -17,7 +17,9 @@ const Footer = () => {
 
   return (
     <Container>
+      <Wrapper>
       <Logo src={Banyanlabslogo} alt="Banyan Labs Logo"></Logo>
+      </Wrapper>
       <FooterLinksContainer>
         <FooterLink to="/">Home</FooterLink>
         <FooterLink to="/trainings-page">Trainings</FooterLink>

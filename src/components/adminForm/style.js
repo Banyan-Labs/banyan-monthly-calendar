@@ -9,7 +9,8 @@ export const Text = styled.div`
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  font-size: 20px;
+  font-size: 25px;
+  text-decoration: underline 3px solid #25648a;
   @media screen and (max-width: 768px) {
     font-size: 10px;
   }
@@ -23,7 +24,7 @@ export const PersonPhoto = styled.div`
   width: 107px;
   height: 107px;
   border-radius: 50%;
-  background: #c4c4c4;
+  background: #25274d;
   margin: 0% 0% 1% 46%;
   display: flex;
   justify-content: center;
@@ -41,7 +42,8 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 3px 3px 0px #29648a;
+  border-radius: 3px;
 `;
 export const Input = styled.input`
   margin: 0% 0% 1% 25%;
@@ -56,6 +58,8 @@ export const SubmitButton = styled.button`
   margin: 0% 0% 1% 36%;
   width: 30%;
   padding: 16px;
+  background-color:#25274d;
+  color:white;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 `;

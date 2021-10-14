@@ -13,8 +13,10 @@ export const Wrapper = styled.div`
   padding: 1em;
 `;
 export const Text = styled.div`
+  font-size: 25px;
+  border-bottom: #29648a solid 3px;
   white-space: nowrap;
-  font-size: calc(0.8em + 1vmin);
+  // font-size: calc(0.8em + 1vmin);
   @media screen and (max-width: 380px) {
     padding-right: 1em;
   }

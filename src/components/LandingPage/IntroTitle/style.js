@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.p`
-  height: 2%;
-  width: 15%;
+
+ 
   margin-top: 1%;
   padding: 0.5% 0% 1% 2%;
-  background-color: #c4c4c4;
-  border-radius: 6px;
-  text-align: left;
+  display:flex;
+  justify-content: center;
   @media screen and (max-width: 768px) {
     width: 20%;
     margin-left: 10%;
@@ -15,8 +14,10 @@ export const Container = styled.p`
   }
 `;
 export const Text = styled.div`
-  font-size: 20px;
+  font-size: 40px;
+  border-bottom:#29648a solid 3px;
   @media screen and (max-width: 768px) {
     font-size: 10px;
   }
 `;
+

@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.p`
-  height: 2%;
-  width: 25%;
-  margin: 1% 0% 1% 0%;
-  padding: 1% 0% 1% 2%;
-  background-color: #c4c4c4;
+float:center;
+
+  padding:5px;
   border-radius: 6px;
-  text-align: left;
+  text-align: center;
   @media screen and (max-width: 768px) {
     width: 30%;
     margin-left: 10%;

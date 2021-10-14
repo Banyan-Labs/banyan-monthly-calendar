@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
-  width: 296px;
+  width: 340px;
   height: 353px;
-  margin: 47px 5px;
-  background: rgba(196, 196, 196, 0.15);
+  margin: 4px 5px;
+  background:white;
+  // background: rgba(196, 196, 196, 0.15);
+  box-shadow: 3px 3px 0px #29648a;
+  border-radius: 10px;
 `;
 export const Wrapper = styled.div`
   display: flex;
@@ -16,7 +19,7 @@ export const Headshot = styled.div`
   width: 107px;
   height: 107px;
   border-radius: 50%;
-  background: #c4c4c4;
+  background: #25274d;
   margin-bottom: 12px;
   display: flex;
   justify-content: center;
@@ -25,34 +28,27 @@ export const Headshot = styled.div`
 export const FirstInitial = styled.div`
   font-size: 65px;
   font-weight: 900px;
+  color: white;
 `;
 export const Name = styled.div`
-  width: 216px;
-  height: 32px;
-  border-radius: 6px;
-  background: #c4c4c4;
+ 
+ text-decoration: underline #29648a;
+  border-bottom: 3px;
   margin-bottom: 12px;
   text-align: center;
   font-size: 20px;
 `;
+
 export const Text = styled.div`
-  width: 216px;
+  width: 306px;
   height: 120px;
   padding: 8px;
-  border-radius: 6px;
-  background: #c4c4c4;
-  scroll-behavior: auto;
-  overflow-y: scroll;
-
-  &::-webkit-scrollbar {
-    width: 10px;
-  }
-  &::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
-  }
+  // box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+  //   0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  // background-color:#aaabb8;
+  // scroll-behavior: auto;
+  // overflow-y: scroll;
 `;
+
+
+
